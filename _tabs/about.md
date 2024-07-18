@@ -6,7 +6,7 @@ order: 4
 
 ##  Summary
 
-I am a Senior Software Developer with 9 years of experience in full-stack development, specializing in architecting reliable, scalable, and efficient software solutions using different software design patterns. Although I don't have a direct professional experience in networking domain, I have gained the relevant networking experience through various tasks/resources like automating network infrastructure for the current project, troubleshooting networking issues with DevOps team in my previous company, practicing different security concepts on [pwn.college](https://pwn.college/hacker/49925), playing Capture the Flag (CTFs) with challenges ranging from web security to analysing network traffic.
+Senior Software Developer with 9+ years of experience in finance, media & telecommunication and environmental sectors. I have successfully delivered 3 big projects over these years. This has helped me in developing skills over multiple stacks. These skills include, but not limited to, gathering requirements from clients, designing scalable, reliable system architecture, using design patterns for efficient development, following secure code practices, developing frontend and backend using different frameworks, setup CI/CD pipeline, add testing frameworks, and setup cloud infrastructure.
 
 
 ## Skills
