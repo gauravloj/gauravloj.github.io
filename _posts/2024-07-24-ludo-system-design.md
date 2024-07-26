@@ -25,7 +25,7 @@ maybe in another post.
 
 To define in concrete terms:
 
-1. Scope: Build Ludo game that can be play by a single user on browser (Can be a single browser for now)
+1. Scope: Build Ludo game that can be played by a single user on browser (Can be a single browser for now)
 1. Objectives: Allow single
 
 ## Defining Requirements
@@ -58,3 +58,64 @@ state of the game. They are:
    This introduces the future scope of adding difficulty levels to the game.
 
 3. User should be able to start a game any time: This is simply to give user the flexibility to decide the fate of the game.
+4. User can resume the same game after closing the tab and opening it back again: This is to ensure that the game state
+   is not lost by any accidental refresh of the page or to enable user to take breaks during the game.
+
+### Non Functional Requirements
+
+For a simple game, it doesn't need to be highly available of scalable at this point. One thing that is important
+for a better user experience is to have a **good responsiveness** of the game, i.e. dice/pieces should react as soon as
+the user clicks on them. Since it doesn't handle any sensitive information so security is also not required here.
+
+## Design
+
+### High Level Design
+
+Since it is a single page web application without any need for scalability or availability,
+we decided not to think about component diagram. There are only two components in action here,
+i.e. user (browser) and Bot (requests are served from a single hosting server).
+
+#### Sequence Diagram
+
+This sequence diagram shows the user interaction with the website in an end to end flow.
+It doesn't show the scenario when user goes to home page in the middle of game, or closes
+the tab and opens it again.
+
+![Sequence Diagram](assets/img/ludo/user-interaction-sequence-diagram.jpg)
+
+#### Website Wireframe
+
+Once the User interaction is decided, we created a basic look of the User Interface.
+These wireframe diagram shows:
+
+1. Landing page: Welcome the user, display game rules and let user pick their favorite color.
+2. Game board: Selected color is always displayed as the bottom home box and all other colors are
+   rotated accordingly in the same order.
+3. Game outcome screen: Once the game is completed, it shows the status of the game and prompts user
+   to start a new game.
+
+![Landing page diagram](assets/img/ludo/ludo-wireframe-landing.jpg)
+![Game board page diagram](assets/img/ludo/ludo-wireframe-gameboard.jpg)
+![Game conclusion page diagram](assets/img/ludo/ludo-wireframe-conclusion.jpg)
+
+### Game rules
+
+1. Two player game
+1. Game is played between user vs computer
+1. Player can choose any color out of red, green, purple, yellow.
+1. Player's home boxes will face each other
+1. Every player will roll the dice alternatively
+1. Once dice is rolled, user can select which piece to move
+1. Player piece will move same steps as the number on the dice rolled.
+1. Player whose all four pieces reaches the winning box first wins the game.
+1. Game will end when any one of the player wins the game
+
+### Technology Stack and design decision
+
+1. Reactjs for frontend: easy to make the game react on different events
+1. Nodejs is used in backend to serve the app
+1. All the game state will be stored in browser's local storage. It allows user to resume game any time they want.
+1. Github is used for version control
+1. Github Actions is used for continuous build and automated testing
+1. Github issues can be used to track any tasks/issues for the website
+1. For now we have not selected any cloud provider to host the website, but it can be decided once the website is fully developed.
