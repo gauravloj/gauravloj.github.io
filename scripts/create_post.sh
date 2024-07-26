@@ -25,5 +25,7 @@ time: $(date "+%Y-%m-%d %H:%M:%S")
 categories: [general, default]
 tags: [default]
 ---
-" > "$(date "+%Y-%m-%d")-$1.md"
+" > "$file_name"
+
+echo "$file_name created successfully"
 
