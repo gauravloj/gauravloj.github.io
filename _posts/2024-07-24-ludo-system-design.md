@@ -1,7 +1,7 @@
 ---
 title: Ludo System Design
 time: 2024-07-24 19:41:46
-categories: [projects, ludo]
+categories: [Projects, Ludo]
 tags: [system-design, architechture]
 ---
 
