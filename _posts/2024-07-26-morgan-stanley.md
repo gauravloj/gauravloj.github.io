@@ -36,6 +36,7 @@ and corresponding action to perform based on that rule.
 
 ## Skills Acquired
 
+1. Understanding of Financial products
 1. Understanding of Software development life cycle
 1. How different components works for a large scale product
 1. Debugging a distributed application that spans across multiple services. Identifying the source service that
