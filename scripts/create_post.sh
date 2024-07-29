@@ -18,8 +18,7 @@ if [ -e "$file_name" ]; then
 fi
 
 
-echo "
----
+echo "---
 title: ${1//[-]/ }
 time: $(date "+%Y-%m-%d %H:%M:%S")
 categories: [general, default]
