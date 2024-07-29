@@ -27,6 +27,10 @@ tags:
   ]
 ---
 
+- Designation: Senior Technical Lead
+- Term: Oct 2018 - Dec 2021
+- Duration: 3 years, 1 months
+
 ## Summary
 
 MediaKind is a Global video service provider. Video streaming application on Android OTT and Apple TV are one of its major product.
@@ -38,7 +42,8 @@ They includes, security services, service management dashboard, backend services
 ### Service Dashboard
 
 This is a tenant based portal that allows the user to manage different backend services and related database records all from single website.
-Services such as Account management, Catalog management, feature toggles, authentication and authorization, Media metadata settings, Media Access control, routing control and many more.
+These services includes Account management, Catalog management, feature toggles, authentication and authorization, Media metadata settings, Media Access control, routing control and many more.
+Being able to manage different services at one place improved project management capabilities for the client.
 
 As a contributor of this dashboard, I have
 
@@ -49,7 +54,7 @@ As a contributor of this dashboard, I have
 
 ### Voice Integration
 
-Since the main product is an streaming application, **Voice commands** is one of the most liked feature by the users.
+Since the main product is a streaming application, **Voice commands** is one of the most liked feature by the users. Approximately 50K subscribers were actively using this feature globally.
 This project is about integrating different Voice activated devices to the OTT application.
 Main idea is to parse the user's voice command to a compatible format and do the corresponding action on the application UI.
 Complexity in this approach comes in using different devices viz. Google home, Google mini, Google Assistant, Alexa, Baidu.

@@ -20,6 +20,9 @@ Senior Software Developer with 9+ years of experience in finance, media & teleco
 
 ## Work Experience
 
+- [MediaKind](/posts/mediakind/)
+- [Morgan Stanley](/posts/morgan-stanley/)
+
 ### OPEN Technologies, Vancouver, Canada
 
 Senior Software Developer
@@ -43,31 +46,3 @@ Member of Technical Staff
 Dec 2021- Mar 2022 (4 months)
 
 - Improved the code reliability and maintainability of Unified Endpoint Management system by adding/updating unit test.
-
-### MediaKind, Bangalore, India
-
-Senior Technical Lead
-Oct 2018 - Dec 2021 (3 years, 1 months)
-
-- Monitor hardware health on Grafana platform feeded by Prometheus
-- Troubleshoot routing issues for the development environment
-- Setup Voice infrastructure on Google Virtual Machine
-- Setup Google Home Voice infrastructure on Google Cloud Platform Virtual Machine
-- Setup Alexa Voice infrastructure on Amazon Web Service (AWS) EC2 instance and AWS Lambda
-- Setup Alexa Voice infrastructure on Amazon Web Service (AWS) EC2 instance and AWS Lambda
-- Enhanced user experience for approximately 50K subscribers worldwide by enabling Voice search service on the streaming application on Android TV
-- Increased the user base through voice controlled features by integrating different Voice Activated Devices (Google Home, Google Assistant and Baidu) with the streaming Application
-- Successfully delivered multiple features by leading a team of 4 members.
-- Improved project management capabilities by developing the Operator Portal (Dashboard) to manage all the backend services at one place
-- Developed SSO service to generate token during Single Sign On to company's website and application and hence improve the login process.
-- Enhanced product security by developing Security Token Service to authenticate and authorize requests to different services.
-- Simplified login experience by implementing SSO service for internal accounts.
-
-### Morgan Stanley, Bangalore, India
-
-Senior Associate
-Aug 2015 - Oct 2018 (3 years, 3 months)
-
-- Developed and maintained features for trade confirmations app to correctly/efficiently generate a transaction confirmation for approx. 10million transaction in a day}
-- Saved licence cost of $30K/year for using third-party app by contributing in development of in-house Rules engine to }
-- Improved the code runtime by 30% by improving system architecture and renovating legacy code to use latest technologies}

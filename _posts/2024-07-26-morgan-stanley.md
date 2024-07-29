@@ -5,6 +5,10 @@ categories: [Work Experience]
 tags: [java, spring beans, python, bash, linux, database]
 ---
 
+- Designation: Senior Associate
+- Term: Aug 2015 - Oct 2018
+- Duration: 3 years, 3 months
+
 ## Summary
 
 Morgan Stanley is one of the biggest global financial service providers.
