@@ -29,7 +29,7 @@ tags:
 
 ## Summary
 
-MediaKind is a Global video service provider. Its one of the major product is video streaming application on Android OTT and Apple TV.
+MediaKind is a Global video service provider. Video streaming application on Android OTT and Apple TV are one of its major product.
 I joined the company as full stack developer. I have worked on different layers of the product during my time here.
 They includes, security services, service management dashboard, backend services, hardware integration, Android app development, frontend development and testing automation.
 
@@ -43,9 +43,8 @@ Services such as Account management, Catalog management, feature toggles, authen
 As a contributor of this dashboard, I have
 
 - Added many feature, such as display of different services mentioned in previous paragraph
-- Added functional tests for new features,
-- Improved the development process by setting up docker on local system,
-- Added documentation for different development process to smoothen the onboarding of a new developer in the team,
+- Added functional tests for new features
+- Added documentation for different development process to smoothen the onboarding of a new developer in the team
 - Lead the development team to ensure timely development of the features and proper testing after deployment
 
 ### Voice Integration
@@ -59,8 +58,8 @@ So, my development experience here involved:
 
 - Designing the abstraction layer and integrating these devices to the app
 - A lot of research and experiments to come up with a good design that is scalable and maintainable
-- _Supporting custom voice commands_ for different clients based on their requirements
-- Regular communication with clients to calibrate the Voice settings according to their needs.
+- Supporting custom voice commands for different clients based on their requirements
+- Regular communication with clients to calibrate the Voice settings according to their needs
 - Debugging the OTT application using Android SDK
 - Collaborate with testers to properly tests the Voice features before release
 - Use of Google Cloud services and AWS Lambda to handle text to speech feature of different devices
@@ -73,7 +72,7 @@ There are two parts in this project,
 - Second, create an authorization server to allow logging in via Single Sign-On (SSO) on the application
 
 They may sound similar, but they are for different areas in the product.
-Since the production app uses SSO login, authorization token is used to track who is logged in and what access privileges do they have inside the application.
+Since the production app used SSO login, authorization token is used to track who is logged in and what access privileges do they have inside the application.
 On the other hand, the SSO service was used for test environment to emulate the SSO login process in the production application.
 
 My role was to develop the **authorization server** for emulation and parallelly **monitor** the Token generation service and fix any issues that comes up anytime while monitoring.
@@ -86,7 +85,7 @@ My responsibilities here includes:
 
 ## My Contributions and Achievements
 
-1. Deep understanding of the system to become a goto person for any issues related to the dashboard, voice integration, and authorization server
+1. Deep understanding of the system to become an SME for any issues related to the dashboard, voice integration, and authorization server
 1. Timely delivery of the features in all the projects
 1. Added functional tests to increase the confidence in the code
 1. Improved development effort by setting up docker instance locally
@@ -107,7 +106,7 @@ My responsibilities here includes:
 1. Understanding OAuth + OpenID connect framework for authorization and authentication
 1. Understanding underlying security practices for authentication and authorization
 1. Collaborating with different teams and stakeholders for a successful delivery of new features
-1. Monitor service health on logs aggregation platforms
+1. Monitor service health using logs aggregation platforms
 1. Managing a small team
 1. Writing well structured documentations
 1. **Technologies used**: C#, ASP.NET, Visual Studio, Typescript, knockoutjs, Google DialogFlow, Google Firebase, Selenium, Cucumber, Azure pipelines, Docker, Grafana, Kibana + ELK, Android SDK, Linux commands, OAuth + OpenID connect

@@ -37,23 +37,6 @@ Mar 2022 - Present (2 years, 4 months)
 - Enhance the user experience by reducing the runtime of the data model by optimizing it to run in 15secs instead of 20mins.
 - Enhance team productivity by adding documentation for the projects and hence providing easy access to product information.
 
-### OPEN Technologies, Vancouver, Canada
-
-Senior Software Developer
-Mar 2022 - Present (2 years, 4 months)
-
-- Setup secure, reliable and scalable Cloud VPS on DigitalOcean to host affordable housing (AHN) website.
-- Setup and monitor firewall for database server to allow only trusted IPs to access the database.
-- Reduce the environment setup time by automating the creation process using Terraform.
-- Setup project build process to automatically deploy the changes to staging environment, hence generated the quick feedback loop for developers.
-- Write python package that can be used in other projects to generate a costing output based on building energy consumption.
-- Configure DigitalOcean spaces to act as CDN for AHN website.
-- Configure SSL Certificate for AHN domain and set it up for auto-renewal
-- Qualify for $1M funding from CMHC by designing and developing Housing Navigator project from end to end.
-- Gain clients from different housing sectors by designing and developing Decarbonization model to generate energy saving recommendations for individual building.
-- Enhance the user experience by reducing the runtime of the data model by optimizing it to run in 15secs instead of 20mins.
-- Enhance team productivity by adding documentation for the projects and hence providing easy access to product information.
-
 ### VMware, Bangalore, India
 
 Member of Technical Staff
