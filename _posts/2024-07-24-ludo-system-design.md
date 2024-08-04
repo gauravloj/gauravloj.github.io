@@ -109,6 +109,9 @@ These wireframe diagram shows:
 1. Player piece will move same steps as the number on the dice rolled.
 1. Player whose all four pieces reaches the winning box first wins the game.
 1. Game will end when any one of the player wins the game
+1. User Will have to select the piece everytime a dice is rolled.
+
+Future scope: User preference can be added to automatically move the piece if only single valid move
 
 ### Technology Stack and design decision
 
