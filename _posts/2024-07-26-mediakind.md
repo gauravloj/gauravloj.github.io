@@ -35,7 +35,7 @@ tags:
 
 MediaKind is a Global video service provider. Video streaming application on Android OTT and Apple TV are one of its major product.
 I joined the company as full stack developer. I have worked on different layers of the product during my time here.
-They includes, security services, service management dashboard, backend services, hardware integration, Android app development, frontend development and testing automation.
+They include security services, backend services, service management dashboard, hardware integration, Android app development, frontend development and testing automation.
 
 ## Projects
 
@@ -114,4 +114,10 @@ My responsibilities here includes:
 1. Monitor service health using logs aggregation platforms
 1. Managing a small team
 1. Writing well structured documentations
-1. **Technologies used**: C#, ASP.NET, Visual Studio, Typescript, knockoutjs, Google DialogFlow, Google Firebase, Selenium, Cucumber, Azure pipelines, Docker, Grafana, Kibana + ELK, Android SDK, Linux commands, OAuth + OpenID connect
+1. **Tools and Technologies used**:
+
+- Languages: C#, Typescript, Javascript, BASH
+- Frameworks: ASP.NET, knockoutjs, Cucumber, OAuth + OpenID connect
+- Tools: Visual Studio, Google DialogFlow, Google Firebase, Selenium, Android SDK
+- DevOps: Azure pipelines, Docker, Grafana, Kibana + ELK
+- Operating Systems: Windows, Linux

@@ -30,7 +30,7 @@ tags:
 - Term: Mar 2022 - Present
 - Duration: 2.5+ years
 
-## Summary
+## About The Company
 
 Climate change being the global issue, OPEN Technologies started with the idea of providing
 city-shapers (builders, constructors, government officials in housing sector) with the energy data analytics to help them in making right decision during initial phase of construction, retrofit of an existing buildings, or maintenance of existing buildings. I joined here as full stack developer and contributed to different projects related to improving energy usage and reducing maintenance costs of a building.
@@ -46,19 +46,19 @@ This project helped generate funding of more than $1 million from Canadian gover
 
 Read more about it on the [official website](https://opentech.eco/products/affordable-housing-navigator/).
 
-### Energy costing Tool
+### Energy Costing Tool
 
-It was initially collection of python scripts to calculate the expected operations cost for the given building. These scripts were written with the intention getting the results instead of using it as part of bigger tool.
+It was initially collection of python scripts to calculate the expected operations cost for the given building. These scripts were written with the intention of getting quick results instead of using it as part of bigger tool.
 
-I converted these scripts to a python package to have a convenient tool that can be used in any other project.
+I integrated these scripts into a python package to have a convenient tool that can be used in any other project.
 It uses basic building information and applies a pre-trained surrogate model to predict the energy usage of the building, and using the energy data, different operational cost is calculated based on geographical location, climate zone and other demographical factors.
 It is mainly used in AHN website to generate the financial information for a new construction building.
 
 ### Decarbonization Tool
 
-This is another product offered by the company that provides a detailed information about building retrofit options.
-This tool help in making a retrofit plan for the building that is cost effective and contributes towards the path of net zero.
-Similar to AHN, I got to work on this product right from the beginning and apart from the experience of complete software development lifecycle, I got to know more about surrogate models and the science behind the model training and predictions.
+This product provides a detailed information about building retrofit options.
+This tool helps in making a retrofit plan for the building that is cost effective and contributes towards the path of net zero.
+Similar to AHN, I got to work on this product right from the beginning and learnt more about surrogate models and the science behind the model training and predictions.
 
 Read more about the tool on the [official website](https://opentech.eco/products/virtual-audits-and-decarbonization-planning/).
 
@@ -94,7 +94,7 @@ Read more about the tool on the [official website](https://opentech.eco/products
 
 ## Skills Acquired
 
-- Complete experience of SDLC: requirement gathering, high/low level designing, planning, development, testing, hosting, maintenance, documentation,
+- Complete experience of SDLC: requirement gathering, high/low level designing, planning, development, testing, hosting, maintenance, documentation
 - Experience with different cloud resources viz. virtual machine, database, container registry, CDN, storages, networking, domain service, load balancers, api gateways
 - System design experience for a data intensive web application and machine learning tool
 - Requirement gathering for a completely new project
@@ -105,7 +105,7 @@ Read more about the tool on the [official website](https://opentech.eco/products
 - Best security practices
 - Tools and Technologies used:
   - Language: Python (Django), Javascript (Reactjs), HTML, CSS (TailwindCSS), BASH
-  - DevOps - Terraform, Git, GithubActions, Docker, DO droplets (Virtual Machines), DO Spaces (Content Delivery Network), plausible
+  - DevOps - Terraform, Git, GithubActions, Docker, DO droplets (Virtual Machines), DO Spaces (Content Delivery Network), Plausible
   - Database - PostGreSQL database
   - Operating System - Linux
   - Product Management - Jira, Confluence, Miro, Figma

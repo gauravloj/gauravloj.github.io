@@ -20,9 +20,9 @@ Senior Software Developer with 9+ years of experience in finance, media & teleco
 
 ## Work Experience
 
+- [OPEN Technologies](/posts/open-technologies/)
 - [MediaKind](/posts/mediakind/)
 - [Morgan Stanley](/posts/morgan-stanley/)
-- [OPEN Technologies](/posts/open-technologies/)
 
 ### VMware, Bangalore, India
 

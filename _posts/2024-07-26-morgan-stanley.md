@@ -52,4 +52,11 @@ and corresponding action to perform based on that rule.
 1. Linux command line: Multiple Linux concepts were useful during the debugging process. Eg. SSH, command line tools, bash to automate some checks
 1. Database migration: During the renovation product, I created an automation script to migrate database tables from old database to new database with different table structures.
 1. Documentation: It is an essential part of product development and I have contributed in adding documentation for different features, processes and troubleshooting guides.
-1. **Tech stack exposure**: Java, Spring, Hibernate, Python, DB2 Database, Linux, Bash, Jira, Confluence, TCM (Change management tool), ServiceNow
+1. **Tools and Technologies used**:
+
+- Languages: Java, Python, Bash
+- Frameworks: Spring, Hibernate
+- Database: DB2
+- Operating System: Windows, Linux
+- Prodect Management Tools: Jira, Confluence
+- DevOps: TCM (Change management tool), ServiceNow
