@@ -26,7 +26,7 @@ maybe in another post.
 To define in concrete terms:
 
 1. Scope: Build Ludo game that can be played by a single user on browser (Can be a single browser for now)
-1. Objectives: Allow single
+1. Objectives: Allow User to play a two player game of Ludo against the bot.
 
 ## Defining Requirements
 
