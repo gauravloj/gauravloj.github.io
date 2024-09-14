@@ -8,8 +8,7 @@ tags: [system-design, architechture]
 # Ludo WebApp Design discussions
 
 This post talks about how the different design decisions were made in making the
-web application to play a simple game of Ludo. Code for this webapp is hosted
-at [Ludo WebApp Github](https://github.com/gauravloj/ludo-webapp).
+web application to play a simple game of Ludo. Code for this webapp is hosted at [Ludo WebApp Github](https://github.com/gauravloj/ludo-webapp).
 It is designed and developed in collaboration with [Apoorva Ranade](https://github.com/apoorvaran)
 
 ## About the project
@@ -115,10 +114,10 @@ Future scope: User preference can be added to automatically move the piece if on
 
 ### Technology Stack and design decision
 
-1. Reactjs for frontend: easy to make the game react on different events
-1. Nodejs is used in backend to serve the app
+1. `Reactjs` for frontend: easy to make the game react on different events
+1. `Nodejs` is used in backend to serve the app
 1. All the game state will be stored in browser's local storage. It allows user to resume game any time they want.
-1. Github is used for version control
-1. Github Actions is used for continuous build and automated testing
-1. Github issues can be used to track any tasks/issues for the website
+1. `Github` is used for version control
+1. `Github Actions` is used for continuous build and automated testing
+1. `Github issues` can be used to track any tasks/issues for the website
 1. For now we have not selected any cloud provider to host the website, but it can be decided once the website is fully developed.
