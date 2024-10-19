@@ -1,3 +1,10 @@
+---
+title: Reverse Engineering Intro
+time: 2024-10-18 18:51:08
+categories: [Talks, "2024"]
+tags: [reverse engineering, binary analysis, disassemblers]
+---
+
 ## Title Banner
 
 ```
