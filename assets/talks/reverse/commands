@@ -1,0 +1,33 @@
+- Run pre-processor on c program
+
+gcc -E filename.c -o fileout.i
+
+------------------------------
+
+- Disassemble python
+
+python -m dis file.py
+
+------------------------------
+
+- Disassemble binary
+
+objdump -M intel --disassemble=<func_name> <binary.out>
+
+------------------------------
+
+- Strip binary
+
+strip --strip-all <binary.out>
+
+# optimize and strip
+gcc -O2 -s -o my_program my_source.c
+
+------------------------------
+
+- Obfuscate
+
+clang -mllvm -obfuscate -o my_program my_source.c
+
+# packer:
+upx --best --lzma my_program

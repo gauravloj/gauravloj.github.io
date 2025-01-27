@@ -1,0 +1,1820 @@
+-###                                           -- print commands to run this compilation
+--CLASSPATH                                    -- CLASSPATH
+--all-warnings                                 -- display all warnings
+--analyze                                      -- run the static analyzer
+--analyzer-no-default-checks                   -- analyzer does no default checks
+--analyzer-output                              -- static analyzer report output format
+--ansi                                         -- same as -std=c89 or -std=c++98
+--assemble                                     -- compile only; do not assemble or link
+--assert                                       -- make an assertion
+--autocomplete                                 -- autocomplete
+--bootclasspath                                -- bootclasspath
+--classpath                                    -- classpath
+--comments                                     -- do not discard comments during preprocess
+--comments-in-macros                           -- do not discard comments, including macro expansion
+--compile                                      -- compile and assemble, but do not link
+--config                                       -- specifies configuration file
+--constant-cfstrings                           -- use constant cfstrings
+--coverage                                     -- coverage
+--cuda-compile-host-device                     -- compile CUDA code for both host and device
+--cuda-device-only                             -- compile CUDA code for device only
+--cuda-gpu-arch                                -- cUDA offloading device architecture
+--cuda-host-only                               -- compile CUDA code for host only
+--cuda-include-ptx                             -- include ptx for the following gpu architecture
+--cuda-noopt-device-debug                      -- enable device-side debug info generation
+--cuda-path                                    -- cUDA installation path
+--cuda-path-ignore-env                         -- ignore environment variables to detect CUDA installation
+--debug                                        -- generate debug information
+--define-macro                                 -- define a macro
+--dependencies                                 -- generate Makefile dependencies
+--dyld-prefix                                  -- dyld prefix
+--dylib_file                                   -- dyld file
+--emit-static-lib                              -- enable linker job to emit a static library
+--encoding                                     -- encoding
+--entry                                        -- specify program entry point is entry
+--extdirs                                      -- extdirs
+--extra-warnings                               -- enable extra warnings
+--force-link                                   -- force link
+--gcc-toolchain                                -- use the gcc toolchain at the given directory
+--gpu-instrument-lib                           -- instrument device library for HIP
+--gpu-max-threads-per-block                    -- default max threads per block for kernel launch bounds for HIP
+--help                                         -- display this information
+--help-hidden                                  -- display help for hidden options
+--hip-device-lib                               -- hIP device library
+--hip-device-lib-path                          -- hip device lib path
+--hip-link                                     -- link clang-offload-bundler bundles for HIP
+--hip-version                                  -- HIP version in the format of major.minor.patch
+--imacros                                      -- include macros from file before parsing
+--include                                      -- include file before parsing
+--include-barrier                              -- restrict all prior -I flags to double-quoted inclusion and remove current directory from include
+--include-directory                            -- add directory to include search path
+--include-directory-after                      -- add directory after include search path
+--include-prefix                               -- set the -iwithprefix prefix
+--include-with-prefix                          -- set directory to system include search path with prefix
+--include-with-prefix-after                    -- set directory to system include search path with prefix
+--include-with-prefix-before                   -- set directory to include search path with prefix
+--ld-path                                      -- ld path
+--libomptarget-amdgcn-bc-path                  -- path to libomptarget-amdgcn bitcode library
+--libomptarget-nvptx-bc-path                   -- path to libomptarget-nvptx bitcode library
+--library-directory                            -- add directory to library search path
+--mhwdiv                                       -- hwdiv
+--migrate                                      -- run the migrator
+--no-cuda-include-ptx                          -- do not include ptx for the following gpu architecture
+--no-cuda-noopt-device-debug                   -- disable device-side debug info generation
+--no-cuda-version-check                        -- don't error out if the detected version of the CUDA install is too low for the requested CUDA gp
+--no-integrated-cpp                            -- no integrated cpp
+--no-line-commands                             -- inhibit generation of linkemakers during preprocess
+--no-offload-arch                              -- no offload arch
+--no-standard-includes                         -- do not search standard system directories or compiler builtin directories for include files
+--no-standard-libraries                        -- no standard libraries
+--no-system-header-prefix                      -- no system header prefix
+--no-undefined                                 -- no undefined
+--no-warnings                                  -- suppress warnings
+--offload-arch                                 -- offload arch
+--optimize                                     -- control the optimization
+--output                                       -- write output to file
+--output-class-directory                       -- output class directory
+--output-pch                                   -- output pch
+--param                                        -- set parameter <param> to value.  See manpage for a complete list of parameters
+--pedantic                                     -- issue all mandatory diagnostics in the C standard
+--pedantic-errors                              -- like -pedantic but issue them as errors
+--pipe                                         -- use pipes rather than intermediate files
+--precompile                                   -- only precompile the input
+--prefix                                       -- add <prefix> to the compiler's search paths
+--preprocess                                   -- preprocess only; do not compile, assemble or link
+--print-diagnostic-categories                  -- print diagnostic categories
+--print-effective-triple                       -- print the effective target triple
+--print-file-name                              -- print the full library path of <file>
+--print-libgcc-file-name                       -- print the library path for the currently used compiler runtime library
+--print-missing-file-dependencies              -- print missing file dependencies
+--print-multi-directory                        -- print multi directory
+--print-multi-lib                              -- print multi lib
+--print-prog-name                              -- print the full program path of <name>
+--print-resource-dir                           -- print the resource directory pathname
+--print-search-dirs                            -- print the paths used for finding libraries and programs
+--print-supported-cpus                         -- print supported cpus
+--print-target-triple                          -- print the normalized target triple
+--print-targets                                -- print the registered targets
+--profile                                      -- enable function profiling for prof
+--profile-blocks                               -- undocumented option
+--ptxas-path                                   -- path to ptxas (used for compiling CUDA code)
+--relocatable-pch                              -- whether to build a relocatable precompiled header
+--resource                                     -- resource
+--rocm-device-lib-path                         -- rOCm device library path
+--rocm-path                                    -- rOCm installation path
+--rtlib                                        -- compiler runtime library to use
+--save-stats                                   -- save llvm statistics
+--serialize-diagnostics                        -- serialize compiler diagnostics to a file
+--shared                                       -- shared
+--signed-char                                  -- signed char
+--specs                                        -- specs
+--static                                       -- static
+--std                                          -- assume that the input sources are for specified standard
+--stdlib                                       -- c++ standard library to use
+--sysroot                                      -- use <directory> as the root directory for headers and libraries
+--system-header-prefix                         -- treat all #include paths starting with <prefix> as including a system header
+--target                                       -- target
+--target-help                                  -- display target specific command line options
+--trace-includes                               -- print name of each header file used
+--traditional                                  -- traditional
+--traditional-cpp                              -- use traditional preprocessor
+--trigraphs                                    -- process trigraph sequences
+--undefine-macro                               -- undefine a macro
+--unsigned-char                                -- unsigned char
+--unwindlib                                    -- unwind library to use
+--user-dependencies                            -- print user dependencies
+--verbose                                      -- enable verbose output
+--verify-debug-info                            -- verify the binary representation of debug output
+--version                                      -- display version information
+--warn-                                        -- enable the specified warning
+--warn-                                        -- enable the specified warning
+--write-dependencies                           -- write a depfile containing user and system dependencies
+--write-user-dependencies                      -- write a depfile containing user dependencies
+-A                                             -- make an assertion
+-B                                             -- add <prefix> to the compiler's search paths
+-C                                             -- do not discard comments during preprocess
+-CC                                            -- do not discard comments, including macro expansion
+-D                                             -- define a macro
+-E                                             -- preprocess only; do not compile, assemble or link
+-EB                                            -- big endian
+-EL                                            -- little endian
+-F                                             -- add directory to framework search path
+-G                                             -- put objects of at most size bytes into small data section
+-G                                             -- put objects of at most size bytes into small data section
+-H                                             -- print name of each header file used
+-I                                             -- add directory to include search path
+-J                                             -- this option specifies where to put .mod files for compiled modules
+-L                                             -- add directory to library search path
+-M                                             -- set flags for generating Makefile dependencies
+-MF                                            -- write dependency output to the given file
+-MJ                                            -- write a compilation database entry per input
+-MQ                                            -- add a make-quoted target
+-MT                                            -- add an unquoted target
+-O                                             -- control the optimization
+-ObjC                                          -- treat source files as Objective-C
+-ObjC++                                        -- treat source files as Objective-C++
+-P                                             -- inhibit generation of linkemakers during preprocess
+-Qn                                            -- do not emit metadata containing compiler name and version
+-Qunused-arguments                             -- don't emit warning for unused driver arguments
+-Qy                                            -- emit metadata containing compiler name and version
+-R                                             -- enable the specified remark
+-Rpass                                         -- report transformations performed by optimization passes
+-Rpass-analysis                                -- report transformation analysis from optimization passes
+-Rpass-missed                                  -- report missed transformations by optimization passes
+-S                                             -- compile only; do not assemble or link
+-T                                             -- specify linker script
+-Tbss                                          -- set starting address of BSS to <addr>
+-Tdata                                         -- set starting address of DATA to <addr>
+-Ttext                                         -- set starting address of TEXT to <addr>
+-U                                             -- undefine a macro
+-V                                             -- specify compiler version
+-W                                             -- this switch is deprecated; use -Wextra instead
+-Wa,                                           -- pass arguments to the assembler
+-Wabi                                          -- warn about things that will change when compiling with an ABI-compliant compiler
+-Wabi-tag                                      -- warn if a subobject has an abi_tag attribute that the complete object type does not have
+-Waddress                                      -- warn about suspicious uses of memory addresses
+-Waggregate-return                             -- warn about returning structures, unions or arrays
+-Waggressive-loop-optimizations                -- warn if a loop with constant number of iterations triggers undefined behavior
+-Waliasing                                     -- warn about possible aliasing of dummy arguments
+-Walign-commons                                -- warn about alignment of COMMON blocks
+-Waligned-new                                  -- warn even if 'new' uses a class member allocation function
+-Wall                                          -- enable most warning messages
+-Walloc-size-larger-than                       -- warn for calls to allocation functions that attempt to allocate objects larger than the specifie
+-Walloc-zero                                   -- warn for calls to allocation functions that specify zero bytes
+-Walloca                                       -- warn on any use of alloca
+-Walloca-larger-than                           -- warn on unbounded uses of alloca, and on bounded uses of alloca whose bound can be larger than <
+-Wampersand                                    -- warn about missing ampersand in continued character constants
+-Wargument-mismatch                            -- warn about type and rank mismatches between arguments and parameters
+-Warray-bounds                                 -- warn if an array is accessed out of bounds
+-Warray-bounds                                 -- warn if an array is accessed out of bounds
+-Warray-temporaries                            -- warn about creation of array temporaries
+-Wassign-intercept                             -- warn whenever an Objective-C assignment is being intercepted by the garbage collector
+-Wattributes                                   -- warn about inappropriate attribute usage
+-Wbad-function-cast                            -- warn about casting functions to incompatible types
+-Wbool-compare                                 -- warn about boolean expression compared with an integer value different from true/false
+-Wbool-operation                               -- warn about certain operations on boolean expressions
+-Wbuiltin-declaration-mismatch                 -- warn when a built-in function is declared with the wrong signature
+-Wbuiltin-macro-redefined                      -- warn when a built-in preprocessor macro is undefined or redefined
+-Wc++-compat                                   -- warn about C constructs that are not in the common subset of C and C++
+-Wc++0x-compat                                 -- deprecated in favor of -Wc++11-compat
+-Wc++11-compat                                 -- warn about C++ constructs whose meaning differs between ISO C++ 1998 and ISO C++ 2011
+-Wc++14-compat                                 -- warn about C++ constructs whose meaning differs between ISO C++ 2011 and ISO C++ 2014
+-Wc++1z-compat                                 -- warn about C++ constructs whose meaning differs between ISO C++ 2014 and (forthcoming) ISO C++ 2
+-Wc-binding-type                               -- warn if the type of a variable might be not interoperable with C
+-Wc90-c99-compat                               -- warn about features not present in ISO C90, but present in ISO C99
+-Wc99-c11-compat                               -- warn about features not present in ISO C99, but present in ISO C11
+-Wcast-align                                   -- warn about pointer casts which increase alignment
+-Wcast-qual                                    -- warn about casts which discard qualifiers
+-Wchar-subscripts                              -- warn about subscripts whose type is "char"
+-Wcharacter-truncation                         -- warn about truncated character expressions
+-Wchkp                                         -- warn about memory access errors found by Pointer Bounds Checker
+-Wclobbered                                    -- warn about variables that might be changed by "longjmp" or "vfork"
+-Wcomment                                      -- warn about possibly nested block comments, and C++ comments spanning more than one physical line
+-Wcomments                                     -- synonym for -Wcomment
+-Wcompare-reals                                -- warn about equality comparisons involving REAL or COMPLEX expressions
+-Wconditionally-supported                      -- warn for conditionally-supported constructs
+-Wconversion                                   -- warn for implicit type conversions that may change a value
+-Wconversion-extra                             -- warn about most implicit conversions
+-Wconversion-null                              -- warn for converting NULL from/to a non-pointer type
+-Wcoverage-mismatch                            -- warn in case profiles in -fprofile-use do not match
+-Wcpp                                          -- warn when a #warning directive is encountered
+-Wctor-dtor-privacy                            -- warn when all constructors and destructors are private
+-Wdangling-else                                -- warn about dangling else
+-Wdate-time                                    -- warn about __TIME__, __DATE__ and __TIMESTAMP__ usage
+-Wdeclaration-after-statement                  -- warn when a declaration is found after a statement
+-Wdelete-incomplete                            -- warn when deleting a pointer to incomplete type
+-Wdelete-non-virtual-dtor                      -- warn about deleting polymorphic objects with non- virtual destructors
+-Wdeprecated                                   -- warn if a deprecated compiler feature, class, method, or field is used
+-Wdeprecated-declarations                      -- warn about uses of __attribute__((deprecated)) declarations
+-Wdesignated-init                              -- warn about positional initialization of structs requiring designated initializers
+-Wdisabled-optimization                        -- warn when an optimization pass is disabled
+-Wdiscarded-array-qualifiers                   -- warn if qualifiers on arrays which are pointer targets are discarded
+-Wdiscarded-qualifiers                         -- warn if type qualifiers on pointers are discarded
+-Wdiv-by-zero                                  -- warn about compile-time integer division by zero
+-Wdouble-promotion                             -- warn about implicit conversions from "float" to "double"
+-Wduplicate-decl-specifier                     -- warn when a declaration has duplicate const, volatile, restrict or _Atomic specifier
+-Wduplicated-branches                          -- warn about duplicated branches in if-else statements
+-Wduplicated-cond                              -- warn about duplicated conditions in an if-else-if chain
+-Weffc++                                       -- warn about violations of Effective C++ style rules
+-Wempty-body                                   -- warn about an empty body in an if or else statement
+-Wendif-labels                                 -- warn about stray tokens after #else and #endif
+-Wenum-compare                                 -- warn about comparison of different enum types
+-Werror                                        -- treat specified warning as error (or all if none specified)
+-Wexpansion-to-defined                         -- warn if "defined" is used outside #if
+-Wextra                                        -- print extra (possibly unwanted) warnings
+-Wfatal-errors                                 -- exit on the first error occurred
+-Wfloat-conversion                             -- warn for implicit type conversions that cause loss of floating point precision
+-Wfloat-equal                                  -- warn if testing floating point numbers for equality
+-Wformat                                       -- warn about printf/scanf/strftime/strfmon format string anomalies
+-Wformat-contains-nul                          -- warn about format strings that contain NUL bytes
+-Wformat-extra-args                            -- warn if passing too many arguments to a function for its format string
+-Wformat-nonliteral                            -- warn about format strings that are not literals
+-Wformat-overflow                              -- warn about function calls with format strings that write past the end of the destination region
+-Wformat-overflow                              -- warn about function calls with format strings that write past the end of the destination region
+-Wformat-security                              -- warn about possible security problems with format functions
+-Wformat-signedness                            -- warn about sign differences with format functions
+-Wformat-truncation                            -- warn about calls to snprintf and similar functions that truncate output
+-Wformat-truncation                            -- warn about calls to snprintf and similar functions that truncate output. Same as -Wformat- trunc
+-Wformat-y2k                                   -- warn about strftime formats yielding 2-digit years
+-Wformat-zero-length                           -- warn about zero-length formats
+-Wframe-address                                -- warn when __builtin_frame_address or __builtin_return_address is used unsafely
+-Wframe-larger-than                            -- warn if a function's stack frame requires more than <number> bytes
+-Wfree-nonheap-object                          -- warn when attempting to free a non-heap object
+-Wfunction-elimination                         -- warn about function call elimination
+-Whsa                                          -- warn when a function cannot be expanded to HSAIL
+-Wignored-attributes                           -- warn whenever attributes are ignored
+-Wignored-qualifiers                           -- warn whenever type qualifiers are ignored
+-Wimplicit                                     -- warn about implicit declarations
+-Wimplicit-fallthrough                         -- warn when a switch case falls through
+-Wimplicit-function-declaration                -- warn about implicit function declarations
+-Wimplicit-int                                 -- warn when a declaration does not specify a type
+-Wimplicit-interface                           -- warn about calls with implicit interface
+-Wimplicit-procedure                           -- warn about called procedures not explicitly declared
+-Wimport                                       -- warn about imports
+-Wincompatible-pointer-types                   -- warn when there is a conversion between pointers that have incompatible types
+-Winherited-variadic-ctor                      -- warn about C++11 inheriting constructors when the base has a variadic constructor
+-Winit-self                                    -- warn about variables which are initialized to themselves
+-Winline                                       -- warn when an inlined function cannot be inlined
+-Wint-conversion                               -- warn about incompatible integer to pointer and pointer to integer conversions
+-Wint-in-bool-context                          -- warn for suspicious integer expressions in boolean context
+-Wint-to-pointer-cast                          -- warn when there is a cast to a pointer from an integer of a different size
+-Winteger-division                             -- warn about constant integer divisions with truncated results
+-Wintrinsic-shadow                             -- warn if a user-procedure has the same name as an intrinsic
+-Wintrinsics-std                               -- warn on intrinsics not part of the selected standard
+-Winvalid-memory-model                         -- warn when an atomic memory model parameter is known to be outside the valid range
+-Winvalid-offsetof                             -- warn about invalid uses of the "offsetof" macro
+-Winvalid-pch                                  -- warn about PCH files that are found but not used
+-Wjump-misses-init                             -- warn when a jump misses a variable initialization
+-Wl,                                           -- pass arguments to the linker
+-Wlarge-by-value-copy                          -- warn on large by value copy
+-Wlarger-than                                  -- warn if an object is larger than <number> bytes
+-Wline-truncation                              -- warn about truncated source lines
+-Wliteral-suffix                               -- warn when a string or character literal is followed by a ud-suffix which does not begin with an 
+-Wlogical-not-parentheses                      -- warn when logical not is used on the left hand side operand of a comparison
+-Wlogical-op                                   -- warn when a logical operator is suspiciously always evaluating to true or false
+-Wlong-long                                    -- do not warn about using "long long" when -pedantic
+-Wlto-type-mismatch                            -- during link time optimization warn about mismatched types of global declarations
+-Wmain                                         -- warn about suspicious declarations of "main"
+-Wmaybe-uninitialized                          -- warn about maybe uninitialized automatic variables
+-Wmemset-elt-size                              -- warn about suspicious calls to memset where the third argument contains the number of elements n
+-Wmemset-transposed-args                       -- warn about suspicious calls to memset where the third argument is constant literal zero and the 
+-Wmisleading-indentation                       -- warn when the indentation of the code does not reflect the block structure
+-Wmissing-braces                               -- warn about possibly missing braces around initializers
+-Wmissing-declarations                         -- warn about global functions without previous declarations
+-Wmissing-field-initializers                   -- warn about missing fields in struct initializers
+-Wmissing-include-dirs                         -- warn about user-specified include directories that do not exist
+-Wmissing-parameter-type                       -- warn about function parameters declared without a type specifier in K&R-style functions
+-Wmissing-prototypes                           -- warn about global functions without prototypes
+-Wmudflap                                      -- warn about constructs not instrumented by -fmudflap
+-Wmultichar                                    -- warn about use of multi-character character constants
+-Wmultiple-inheritance                         -- warn on direct multiple inheritance
+-Wnamespaces                                   -- warn on namespace definition
+-Wnarrowing                                    -- warn about narrowing conversions within { } that are ill-formed in C++11
+-Wnested-externs                               -- warn about "extern" declarations not at file scope
+-Wnoexcept                                     -- warn when a noexcept expression evaluates to false even though the expression cant actually thro
+-Wnoexcept-type                                -- warn if C++1z noexcept function type will change the mangled name of a symbol
+-Wnon-template-friend                          -- warn when non-templatized friend functions are declared within a template
+-Wnon-virtual-dtor                             -- warn about non-virtual destructors
+-Wnonnull                                      -- warn about NULL being passed to argument slots marked as requiring non-NULL
+-Wnonnull-compare                              -- warn if comparing pointer parameter with nonnull attribute with NULL
+-Wnonportable-cfstrings                        -- warn on CFStrings containing nonportable characters
+-Wnormalized                                   -- warn about non-normalised Unicode strings
+-Wnull-dereference                             -- warn if dereferencing a NULL pointer may lead to erroneous or undefined behavior
+-Wodr                                          -- warn about some C++ One Definition Rule violations during link time optimization
+-Wold-style-cast                               -- warn if a C-style cast is used in a program
+-Wold-style-declaration                        -- warn for obsolescent usage in a declaration
+-Wold-style-definition                         -- warn if an old-style parameter definition is used
+-Wopenmp-simd                                  -- warn if a simd directive is overridden by the vectorizer cost model
+-Woverflow                                     -- warn about overflow in arithmetic expressions
+-Woverlength-strings                           -- warn if a string is longer than the maximum portable length specified by the standard
+-Woverloaded-virtual                           -- warn about overloaded virtual function names
+-Woverride-init                                -- warn about overriding initializers without side effects
+-Woverride-init-side-effects                   -- warn about overriding initializers with side effects
+-Wp,                                           -- pass arguments to the preprocessor
+-Wpacked                                       -- warn when the packed attribute has no effect on struct layout
+-Wpacked-bitfield-compat                       -- warn about packed bit-fields whose offset changed in GCC 4.4
+-Wpadded                                       -- warn when padding is required to align structure members
+-Wparentheses                                  -- warn about possibly missing parentheses
+-Wpedantic                                     -- issue warnings needed for strict compliance to the standard
+-Wplacement-new                                -- warn for placement new expressions with undefined behavior
+-Wpmf-conversions                              -- warn when converting the type of pointers to member functions
+-Wpointer-arith                                -- warn about function pointer arithmetic
+-Wpointer-compare                              -- warn when a pointer is compared with a zero character constant
+-Wpointer-sign                                 -- warn when a pointer differs in signedness in an assignment
+-Wpointer-to-int-cast                          -- warn when a pointer is cast to an integer of a different size
+-Wpoison-system-directories                    -- warn for -I and -L options using system directories if cross compiling
+-Wpragmas                                      -- warn about misuses of pragmas
+-Wproperty-assign-default                      -- warn if a property for an Objective-C object has no assign semantics specified
+-Wprotocol                                     -- warn if inherited methods are unimplemented
+-Wpsabi                                        -- warn about psabi
+-Wreal-q-constant                              -- warn about real-literal-constants with 'q' exponent-letter
+-Wrealloc-lhs                                  -- warn when a left-hand-side array variable is reallocated
+-Wrealloc-lhs-all                              -- warn when a left-hand-side variable is reallocated
+-Wredundant-decls                              -- warn about multiple declarations of the same object
+-Wregister                                     -- warn about uses of register storage specifier
+-Wreorder                                      -- warn when the compiler reorders code
+-Wrestrict                                     -- warn when an argument passed to a restrict- qualified parameter aliases with another argument
+-Wreturn-local-addr                            -- warn about returning a pointer/reference to a local or temporary variable
+-Wreturn-type                                  -- warn whenever a function's return type defaults to "int" (C), or about inconsistent return types
+-Wscalar-storage-order                         -- warn on suspicious constructs involving reverse scalar storage order
+-Wselector                                     -- warn if a selector has multiple methods
+-Wsequence-point                               -- warn about possible violations of sequence point rules
+-Wshadow                                       -- warn when one variable shadows another.  Same as  -Wshadow=global
+-Wshadow-ivar                                  -- warn if a local declaration hides an instance variable
+-Wshift-count-negative                         -- warn if shift count is negative
+-Wshift-count-overflow                         -- warn if shift count >= width of type
+-Wshift-negative-value                         -- warn if left shifting a negative value
+-Wshift-overflow                               -- warn if left shift of a signed value overflows
+-Wshift-overflow                               -- warn if left shift of a signed value overflows.  Same as -Wshift-overflow=
+-Wsign-compare                                 -- warn about signed-unsigned comparisons
+-Wsign-conversion                              -- warn for implicit type conversions between signed and unsigned integers
+-Wsign-promo                                   -- warn when overload promotes from unsigned to signed
+-Wsized-deallocation                           -- warn about missing sized deallocation functions
+-Wsizeof-array-argument                        -- warn when sizeof is applied on a parameter declared as an array
+-Wsizeof-pointer-memaccess                     -- warn about suspicious length parameters to certain string functions if the argument uses sizeof
+-Wstack-protector                              -- warn when not issuing stack smashing protection for some reason
+-Wstack-usage                                  -- warn if stack usage might be larger than specified amount
+-Wstrict-aliasing                              -- warn about code which might break strict aliasing rules
+-Wstrict-aliasing                              -- warn about code which might break strict aliasing rules
+-Wstrict-null-sentinel                         -- warn about uncasted NULL used as sentinel
+-Wstrict-overflow                              -- warn about optimizations that assume that signed overflow is undefined
+-Wstrict-overflow                              -- warn about optimizations that assume that signed overflow is undefined
+-Wstrict-prototypes                            -- warn about unprototyped function declarations
+-Wstrict-selector-match                        -- warn if type signatures of candidate methods do not match exactly
+-Wstringop-overflow                            -- under the control of Object Size type, warn about buffer overflow in string manipulation functio
+-Wstringop-overflow                            -- warn about buffer overflow in string manipulation functions like memcpy and strcpy.  Same as  -W
+-Wsubobject-linkage                            -- warn if a class type has a base or a field whose type uses the anonymous namespace or depends on
+-Wsuggest-attribute                            -- warn about functions that might be candidates for attributes
+-Wsuggest-final-methods                        -- warn about C++ virtual methods where adding final keyword would improve code quality
+-Wsuggest-final-types                          -- warn about C++ polymorphic types where adding final keyword would improve code quality
+-Wsuggest-override                             -- suggest that the override keyword be used when the declaration of a virtual function overrides a
+-Wsurprising                                   -- warn about "suspicious" constructs
+-Wswitch                                       -- warn about enumerated switches, with no default, missing a case
+-Wswitch-bool                                  -- warn about switches with boolean controlling expression
+-Wswitch-default                               -- warn about enumerated switches missing a "default-" statement
+-Wswitch-enum                                  -- warn about all enumerated switches missing a specific case
+-Wswitch-unreachable                           -- warn about statements between switch's controlling expression and the first case
+-Wsync-nand                                    -- warn when __sync_fetch_and_nand and __sync_nand_and_fetch built-in functions are used
+-Wsynth                                        -- deprecated. This switch has no effect
+-Wsystem-headers                               -- do not suppress warnings from system headers
+-Wtabs                                         -- permit nonconforming uses of the tab character
+-Wtarget-lifetime                              -- warn if the pointer in a pointer assignment might outlive its target
+-Wtautological-compare                         -- warn if a comparison always evaluates to true or false
+-Wtemplates                                    -- warn on primary template declaration
+-Wterminate                                    -- warn if a throw expression will always result in a call to terminate()
+-Wtraditional                                  -- warn about features not present in traditional C
+-Wtraditional-conversion                       -- warn of prototypes causing type conversions different from what would happen in the absence of p
+-Wtrampolines                                  -- warn whenever a trampoline is generated
+-Wtrigraphs                                    -- warn if trigraphs are encountered that might affect the meaning of the program
+-Wtype-limits                                  -- warn if a comparison is always true or always false due to the limited range of the data type
+-Wundeclared-selector                          -- warn about @selector()s without previously declared methods
+-Wundef                                        -- warn if an undefined macro is used in an #if directive
+-Wundefined-do-loop                            -- warn about an invalid DO loop
+-Wunderflow                                    -- warn about underflow of numerical constant expressions
+-Wuninitialized                                -- warn about uninitialized automatic variables
+-Wunknown-pragmas                              -- warn about unrecognized pragmas
+-Wunreachable-code                             -- warn on code that will not be executed
+-Wunreachable-code-aggressive                  -- controls -Wunreachable-code, -Wunreachable-code-break, -Wunreachable-code-return
+-Wunreachable-code-break                       -- warn when break will never be executed
+-Wunreachable-code-loop-increment              -- warn when loop will be executed only once
+-Wunreachable-code-return                      -- warn when return will not be executed
+-Wunsafe-loop-optimizations                    -- warn if the loop cannot be optimized due to nontrivial assumptions
+-Wunsuffixed-float-constants                   -- warn about unsuffixed float constants
+-Wunused                                       -- enable all -Wunused- warnings
+-Wunused-but-set-parameter                     -- warn when a function parameter is only set, otherwise unused
+-Wunused-but-set-variable                      -- warn when a variable is only set, otherwise unused
+-Wunused-const-variable                        -- warn when a const variable is unused
+-Wunused-const-variable                        -- warn when a const variable is unused.  Same as  -Wunused-const-variable=
+-Wunused-dummy-argument                        -- warn about unused dummy arguments
+-Wunused-function                              -- warn when a function is unused
+-Wunused-label                                 -- warn when a label is unused
+-Wunused-local-typedefs                        -- warn when typedefs locally defined in a function are not used
+-Wunused-macros                                -- warn about macros defined in the main file that are not used
+-Wunused-parameter                             -- warn when a function parameter is unused
+-Wunused-result                                -- warn if a caller of a function, marked with attribute warn_unused_result, does not use its retur
+-Wunused-value                                 -- warn when an expression value is unused
+-Wunused-variable                              -- warn when a variable is unused
+-Wuse-without-only                             -- warn about USE statements that have no ONLY qualifier
+-Wuseless-cast                                 -- warn about useless casts
+-Wvarargs                                      -- warn about questionable usage of the macros used to retrieve variable arguments
+-Wvariadic-macros                              -- warn about using variadic macros
+-Wvector-operation-performance                 -- warn when a vector operation is compiled outside the SIMD
+-Wvirtual-inheritance                          -- warn on direct virtual inheritance
+-Wvirtual-move-assign                          -- warn if a virtual base has a non-trivial move assignment operator
+-Wvla                                          -- warn if a variable length array is used
+-Wvla-larger-than                              -- warn on unbounded uses of variable-length arrays, and on bounded uses of variable-length arrays 
+-Wvolatile-register-var                        -- warn when a register variable is declared volatile
+-Wwrite-strings                                -- in C++, nonzero means warn about deprecated conversion from string literals to 'char *'.  In C, 
+-Wzero-as-null-pointer-constant                -- warn when a literal '0' is used as null pointer
+-Wzerotrip                                     -- warn about zero-trip DO loops
+-Xanalyzer                                     -- pass <arg> to the static analyzer
+-Xarch_device                                  -- pass arg to CUDA/HIP device compilation
+-Xarch_host                                    -- pass arg to CUDA/HIP host compilation
+-Xassembler                                    -- pass argument to the assembler
+-Xclang                                        -- pass <arg> to the clang compiler
+-Xcuda-fatbinary                               -- pass arg to fatbinary invocation
+-Xcuda-ptxas                                   -- pass arg to the ptxas assemler
+-Xflang                                        -- pass <arg> to the flang compiler
+-Xlinker                                       -- pass argument to the linker
+-Xopenmp-target                                -- pass arg to the the target offloading toolchain
+-Xpreprocessor                                 -- pass argument to the preprocessor
+-Z                                             -- undocumented option
+-a                                             -- undocumented option
+-all_load                                      -- undocumented option
+-allowable_client                              -- undocumented option
+-ansi                                          -- same as -std=c89 or -std=c++98
+-arch                                          -- arch
+-arch_errors_fatal                             -- arch errors fatal
+-arch_only                                     -- arch only
+-arcmt-migrate-emit-errors                     -- emit ARC errors even if the migrator can fix them
+-arcmt-migrate-report-output                   -- output path for the plist report
+-aux-info                                      -- emit declaration information into <file>
+-b                                             -- specify target machine to compile to
+-bind_at_load                                  -- bind at load
+-bundle                                        -- bundle
+-bundle_loader                                 -- bundle loader
+-c                                             -- compile and assemble, but do not link
+-cl-denorms-are-zero                           -- allow denormals to be flushed to zero
+-cl-fast-relaxed-math                          -- cl fast relaxed math
+-cl-finite-math-only                           -- allow floating-point optimizations
+-cl-fp32-correctly-rounded-divide-sqrt         -- specify that divide and sqrt are correctly rounded
+-cl-kernel-arg-info                            -- generate kernel argument metadata
+-cl-mad-enable                                 -- allow use of less precise MAD computations
+-cl-no-signed-zeros                            -- allow use of no signed zeros computations
+-cl-no-stdinc                                  -- disables all standard includes
+-cl-opt-disable                                -- disables all optimizations
+-cl-single-precision-constant                  -- treat double float constant as single precision
+-cl-std                                        -- openCL language standard to compile for
+-cl-strict-aliasing                            -- this option is added for compatibility with OpenCL 1.0
+-cl-uniform-work-group-size                    -- defines that the global work-size be uniform
+-cl-unsafe-math-optimizations                  -- allow unsafe floating-point optimizations
+-client_name                                   -- client name
+-compatibility_version                         -- compatibility version
+-coverage                                      -- coverage
+-cpp                                           -- cpp
+-cuid                                          -- an id for compilation unit
+-current_version                               -- current version
+-cxx-isystem                                   -- add directory to the C++ SYSTEM include search path
+-d                                             -- dump the state of the preprocessor
+-dead_strip                                    -- dead strip
+-dependency-dot                                -- file to write dot-formatted header dependencies to
+-dependency-file                               -- file to write dependency output to
+-dumpbase                                      -- set the file basename to be used for dumps
+-dumpdir                                       -- set the directory name to be used for dumps
+-dumpmachine                                   -- display the compiler's target processor
+-dumpspecs                                     -- display all of the built in spec strings
+-dumpversion                                   -- display the version of the compiler
+-dylinker                                      -- dylinker
+-dylinker_install_name                         -- dylinker install name
+-dynamic                                       -- dynamic
+-dynamiclib                                    -- dynamic lib
+-e                                             -- specify program entry point is entry
+-emit-ast                                      -- emit Clang AST files for source inputs
+-emit-interface-stubs                          -- generate Interface Stub Files
+-emit-llvm                                     -- use the LLVM representation for assembler and object files
+-emit-merged-ifs                               -- generate Interface Stub Files, emit merged text not binary
+-exported_symbols_list                         -- exported symbols list
+-fPIC                                          -- generate position-independent code if possible (large mode)
+-fPIE                                          -- generate position-independent code for executables if possible (large mode)
+-fabi-version                                  -- use specified C++ ABI version
+-faccess-control                               -- access control
+-fada-spec-parent                              -- dump Ada specs as child units of given parent
+-faddrsig                                      -- emit an address-significance table
+-faggressive-function-elimination              -- aggressive function elimination
+-faggressive-loop-optimizations                -- aggressively optimize loops using language constraints
+-falign-commons                                -- align commons
+-falign-functions                              -- align the start of functions
+-falign-jumps                                  -- align labels which are only reached by jumping
+-falign-labels                                 -- align all labels
+-falign-loops                                  -- align the start of loops
+-faligned-allocation                           -- aligned allocation
+-faligned-new                                  -- enable C++17 aligned allocation functions
+-fall-intrinsics                               -- all intrinsics
+-fallow-editor-placeholders                    -- treat editor placeholders as valid source code
+-fallow-parameterless-variadic-functions       -- allow variadic functions without named parameter
+-fallow-unsupported                            -- allow unsupported
+-falternative-parameter-statement              -- enable the old style PARAMETER statement
+-faltivec                                      -- altivec
+-fansi-escape-codes                            -- use ANSI escape codes for diagnostics
+-fapple-kext                                   -- use Apple's kernel extensions ABI
+-fapple-link-rtlib                             -- force linking the clang builtins runtime library
+-fapple-pragma-pack                            -- enable Apple GCC-compatible #pragma pack handling
+-fapplication-extension                        -- restrict code to those available for App Extensions
+-fasm                                          -- recognize the asm keyword
+-fasm-blocks                                   -- asm blocks
+-fassociative-math                             -- allow optimization for floating-point arithmetic which may change the result of the operation du
+-fassume-sane-operator-new                     -- assume sane operator new
+-fast                                          -- ast
+-fastcp                                        -- astcp
+-fastf                                         -- astf
+-fasynchronous-unwind-tables                   -- generate unwind tables that are exact at each instruction boundary
+-fauto-inc-dec                                 -- generate auto-inc/dec instructions
+-fauto-profile                                 -- enable sample-based profile guided optimizations
+-fauto-profile-accurate                        -- auto profile accurate
+-fautolink                                     -- autolink
+-fautomatic                                    -- automatic
+-fbackslash                                    -- change the interpretation of backslashes in string literals
+-fbacktrace                                    -- backtrace
+-fbasic-block-sections                         -- generate labels for each basic block
+-fbinutils-version                             -- produced object files can use all ELF features supported by this version
+-fblas-matmul-limit                            -- blas matmul limit
+-fblocks                                       -- enable the blocks language feature
+-fbootclasspath                                -- bootclasspath
+-fborland-extensions                           -- accept non-standard constructs supported by the Borland compiler
+-fbounds-check                                 -- generate code to check bounds before indexing arrays
+-fbracket-depth                                -- bracket depth
+-fbranch-count-reg                             -- replace add, compare, branch with branch on count register
+-fbranch-probabilities                         -- use profiling information for branch probabilities
+-fbranch-target-load-optimize                  -- perform branch target load optimization before prologue / epilogue threading
+-fbranch-target-load-optimize2                 -- perform branch target load optimization after prologue / epilogue threading
+-fbtr-bb-exclusive                             -- restrict target load migration not to re-use registers in any basic block
+-fbuild-session-file                           -- use the last modification time of <file> as the build session timestamp
+-fbuild-session-timestamp                      -- time when the current build session started
+-fbuilding-libgcc                              -- specify building libgcc
+-fbuiltin                                      -- recognize builtin functions
+-fbuiltin-module-map                           -- load the clang builtins module map file
+-fc++-static-destructors                       -- c++ static destructors
+-fcall-saved-                                  -- mark <register> as being preserved across functions
+-fcall-used-                                   -- mark <register> as being corrupted by function calls
+-fcaller-saves                                 -- save registers around function calls
+-fcanonical-system-headers                     -- where shorter use canonicalized paths to system headers
+-fcaret-diagnostics                            -- show diagnostic messages using a caret
+-fcf-protection                                -- instrument control-flow architecture protection
+-fcf-runtime-abi                               -- cf runtime abi
+-fchar8_t                                      -- enable C++ builtin type char8_t
+-fcheck                                        -- check
+-fcheck-array-temporaries                      -- check array temporaries
+-fcheck-data-deps                              -- compare the results of several data dependence analyzers
+-fcheck-pointer-bounds                         -- add pointer bounds checker instrumentation
+-fchkp-check-incomplete-type                   -- generate pointer bounds check for variables with incomplete type
+-fchkp-check-read                              -- generate checks for all read accesses to memory
+-fchkp-check-write                             -- generate checks for all write accesses to memory
+-fchkp-first-field-has-own-bounds              -- forces checker to use narrowed bounds for address of the first field
+-fchkp-instrument-calls                        -- generate bounds passing for calls
+-fchkp-instrument-marked-only                  -- instrument only functions marked with bnd_instrument attribute
+-fchkp-narrow-bounds                           -- control how checker handle pointers to object fields
+-fchkp-narrow-to-innermost-array               -- forces checker to use bounds of the innermost arrays in case of nested static array access
+-fchkp-optimize                                -- allow checker optimizations
+-fchkp-store-bounds                            -- generate bounds stores for pointer writes
+-fchkp-treat-zero-dynamic-size-as-infinite     -- with this option zero size obtained dynamically for objects with incomplete type will be treated
+-fchkp-use-fast-string-functions               -- allow to use *_nobnd versions of string functions
+-fchkp-use-nochk-string-functions              -- allow to use *_nochk versions of string functions
+-fchkp-use-static-bounds                       -- use statically initialized variable for vars bounds instead of generating them each time it is r
+-fchkp-use-static-const-bounds                 -- use statically initialized variable for constant bounds
+-fchkp-use-wrappers                            -- transform instrumented builtin calls into calls to wrappers
+-fchkp-zero-input-bounds-for-main              -- use zero bounds for all incoming arguments in main function
+-fcilkplus                                     -- enable Cilk Plus
+-fclang-abi-compat                             -- attempt to match the ABI of Clang <version>
+-fclasspath                                    -- classpath
+-fcoarray                                      -- coarray
+-fcode-hoisting                                -- enable code hoisting
+-fcolor-diagnostics                            -- enable colors in diagnostics
+-fcombine-stack-adjustments                    -- looks for opportunities to reduce stack adjustments and stack references
+-fcomment-block-commands                       -- treat each comma separated argument in <arg> as a documentation comment block command
+-fcommon                                       -- do not put uninitialized globals in the common section
+-fcompare-debug                                -- compile with and without e.g. -gtoggle, and compare the final-insns dump
+-fcompare-debug-second                         -- run only the second compilation of -fcompare-debug
+-fcompare-elim                                 -- perform comparison elimination after register allocation has finished
+-fcompile-resource                             -- compile resource
+-fcomplete-member-pointers                     -- require member pointer base types to be complete if they would be significant under the Microsof
+-fcond-mismatch                                -- allow the arguments of the ? operator to have different types
+-fconserve-stack                               -- do not perform optimizations increasing noticeably stack usage
+-fconstant-cfstrings                           -- constant cfstrings
+-fconstant-string-class                        -- constant string class
+-fconstexpr-backtrace-limit                    -- constexpr backtrace limit
+-fconstexpr-depth                              -- constexpr depth
+-fconstexpr-steps                              -- constexpr steps
+-fconvergent-functions                         -- assume functions may be convergent
+-fconvert                                      -- convert
+-fcoroutines-ts                                -- enable support for the C++ Coroutines TS
+-fcoverage-compilation-dir                     -- the compilation directory to embed in the coverage mapping
+-fcoverage-mapping                             -- generate coverage mapping to enable code coverage analysis
+-fcoverage-prefix-map                          -- remap file source paths in coverage mapping
+-fcprop-registers                              -- perform a register copy-propagation optimization pass
+-fcrash-diagnostics-dir                        -- crash diagnostics dir
+-fcray-pointer                                 -- cray pointer
+-fcreate-profile                               -- create profile
+-fcrossjumping                                 -- perform cross-jumping optimization
+-fcs-profile-generate                          -- generate instrumented code to collect context sensitive execution counts
+-fcs-profile-generate                          -- generate instrumented code to collect context sensitive execution counts
+-fcse-follow-jumps                             -- when running CSE, follow jumps to their targets
+-fcuda-approx-transcendentals                  -- use approximate transcendental functions
+-fcuda-flush-denormals-to-zero                 -- flush denormal floating point values to zero in CUDA device mode
+-fcuda-rdc                                     -- cuda rdc
+-fcuda-short-ptr                               -- use 32-bit pointers for accessing const/local/shared address spaces
+-fcx-fortran-rules                             -- complex multiplication and division follow Fortran rules
+-fcx-limited-range                             -- omit range reduction step when performing complex division
+-fcxx-exceptions                               -- enable C++ exceptions
+-fcxx-modules                                  -- cxx modules
+-fd-lines-as-code                              -- d lines as code
+-fd-lines-as-comments                          -- d lines as comments
+-fdata-sections                                -- place data items into their own section
+-fdbg-cnt                                      -- ,<counter>-<limit>,...) Set the debug counter limit
+-fdbg-cnt-list                                 -- list all available debugging counters with their limits and counts
+-fdce                                          -- use the RTL dead code elimination pass
+-fdebug-compilation-dir                        -- the compilation directory to embed in the debug info
+-fdebug-cpp                                    -- emit debug annotations during preprocessing
+-fdebug-default-version                        -- default DWARF version to use
+-fdebug-dump-parse-tree                        -- dump the parse tree
+-fdebug-dump-provenance                        -- dump provenance
+-fdebug-dump-symbols                           -- dump symbols after the semantic analysis
+-fdebug-info-for-profiling                     -- emit extra debug info to make sample profile more accurate
+-fdebug-macro                                  -- emit macro debug information
+-fdebug-measure-parse-tree                     -- measure the parse tree
+-fdebug-pass-arguments                         -- debug pass arguments
+-fdebug-pass-structure                         -- debug pass structure
+-fdebug-pre-fir-tree                           -- dump the pre-FIR tree
+-fdebug-prefix-map                             -- map one directory name to another in debug information
+-fdebug-ranges-base-address                    -- use DWARF base address selection entries in .debug_ranges
+-fdebug-types-section                          -- output .debug_types section when using DWARF v4 debuginfo
+-fdebug-unparse                                -- unparse and stop
+-fdebug-unparse-with-symbols                   -- unparse and stop
+-fdeclspec                                     -- allow __declspec as a keyword
+-fdefault-double-8                             -- set the default double precision kind to an 8 byte wide type
+-fdefault-integer-8                            -- set the default integer kind to an 8 byte wide type
+-fdefault-real-8                               -- set the default real kind to an 8 byte wide type
+-fdefer-pop                                    -- defer popping functions args from stack until later
+-fdelayed-branch                               -- attempt to fill delay slots of branch instructions
+-fdelayed-template-parsing                     -- parse templated function definitions at the end of the translation unit
+-fdelete-dead-exceptions                       -- delete dead instructions that may throw exceptions
+-fdelete-null-pointer-checks                   -- delete useless null pointer checks
+-fdenormal-fp-math                             -- denormal fp math
+-fdepfile-entry                                -- depfile entry
+-fdevirtualize                                 -- try to convert virtual calls to direct ones
+-fdevirtualize-speculatively                   -- perform speculative devirtualization
+-fdiagnostics-absolute-paths                   -- print absolute paths in diagnostics
+-fdiagnostics-color                            -- colorize diagnostics
+-fdiagnostics-fixit-info                       -- supply fixit into with diagnostic messages
+-fdiagnostics-format                           -- diagnostics format
+-fdiagnostics-generate-patch                   -- print fix-it hints to stderr in unified diff format
+-fdiagnostics-hotness-threshold                -- prevent optimization remarks from being output if they do not meet threshold
+-fdiagnostics-parseable-fixits                 -- print fixit hints in machine-readable form
+-fdiagnostics-print-source-range-info          -- print source range spans in numeric form
+-fdiagnostics-show-caret                       -- show the source line with a caret indicating the column
+-fdiagnostics-show-category                    -- diagnostics show category
+-fdiagnostics-show-hotness                     -- enable profile hotness information in diagnostic line
+-fdiagnostics-show-location                    -- how often to emit source location at the beginning of line-wrapped diagnostics
+-fdiagnostics-show-note-include-stack          -- display include stacks for diagnostic notes
+-fdiagnostics-show-option                      -- amend appropriate diagnostic messages with the command line option that controls them
+-fdiagnostics-show-template-tree               -- print a template comparison tree for differing templates
+-fdigraphs                                     -- enable alternative token representations
+-fdirect-access-external-data                  -- don't use GOT indirection to reference external data symbols
+-fdirectives-only                              -- preprocess directives only
+-fdiscard-value-names                          -- discard value names in LLVM IR
+-fdollar-ok                                    -- dollar ok
+-fdollars-in-identifiers                       -- permit $ as an identifier character
+-fdouble-square-bracket-attributes             -- enable double square bracket attributes
+-fdse                                          -- use the RTL dead store elimination pass
+-fdump-ada-spec                                -- write all declarations as Ada code transitively
+-fdump-ada-spec-slim                           -- write all declarations as Ada code for the given file only
+-fdump-final-insns                             -- dump to filename the insns at the end of translation
+-fdump-fortran-optimized                       -- dump fortran optimized
+-fdump-fortran-original                        -- dump fortran original
+-fdump-go-spec                                 -- write all declarations to file as Go code
+-fdump-noaddr                                  -- suppress output of addresses in debugging dumps
+-fdump-parse-tree                              -- dump parse tree
+-fdump-passes                                  -- dump optimization passes
+-fdump-unnumbered                              -- suppress output of instruction numbers, line number notes and addresses in debugging dumps
+-fdump-unnumbered-links                        -- suppress output of previous and next insn numbers in debugging dumps
+-fdwarf-directory-asm                          -- DWARF directory asm
+-fdwarf-exceptions                             -- use DWARF style exceptions
+-fdwarf2-cfi-asm                               -- enable CFI tables via GAS assembler directives
+-fearly-inlining                               -- perform early inlining
+-felide-constructors                           -- elide constructors
+-felide-type                                   -- elide types when printing diagnostics
+-feliminate-dwarf2-dups                        -- perform DWARF2 duplicate elimination
+-feliminate-unused-debug-symbols               -- perform unused type elimination in debug info
+-feliminate-unused-debug-types                 -- perform unused type elimination in debug info
+-fembed-bitcode                                -- embed LLVM bitcode (option: off, all, bitcode, marker)
+-fembed-bitcode                                -- equivalent to -fembed-bitcode=all
+-fembed-bitcode-marker                         -- equivalent to -fembed-bitcode=marker
+-femit-all-decls                               -- emit all declarations
+-femit-class-debug-always                      -- do not suppress C++ class debug information
+-femit-struct-debug-baseonly                   -- aggressive reduced debug info for structs
+-femit-struct-debug-detailed                   -- detailed reduced debug info for structs
+-femit-struct-debug-reduced                    -- conservative reduced debug info for structs
+-femulated-tls                                 -- use emutls functions to access thread_local variables
+-fenable-matrix                                -- enable matrix data type and related builtin functions
+-fencoding                                     -- encoding
+-ferror-limit                                  -- error limit
+-fescaping-block-tail-calls                    -- escaping block tail calls
+-fexceptions                                   -- enable exception handling
+-fexcess-precision                             -- specify handling of excess floating-point precision
+-fexec-charset                                 -- convert all strings and character constants to character set
+-fexpensive-optimizations                      -- perform a number of minor, expensive optimizations
+-fexperimental-isel                            -- experimental isel
+-fexperimental-new-constant-interpreter        -- enable the experimental new constant interpreter
+-fexperimental-relative-c++-abi-vtables        -- use the experimental C++ class ABI for classes with vtables
+-fexperimental-strict-floating-point           -- enables experimental strict floating point in LLVM
+-fextdirs                                      -- extdirs
+-fextended-identifiers                         -- permit universal character names in identifiers
+-fexternal-blas                                -- external blas
+-ff2c                                          -- f2c
+-ffast-math                                    -- sets -fno-math-errno, -funsafe-math-optimizations, -ffinite-math-only, -fno-rounding-math, -fno-
+-ffat-lto-objects                              -- output lto objects containing both the intermediate language and binary output
+-ffile-compilation-dir                         -- the compilation directory to embed in the debug info
+-ffile-prefix-map                              -- remap file source paths in debug info and predefined preprocessor macros
+-ffine-grained-bitfield-accesses               -- use separate accesses for consecutive bitfield runs with legal widths and alignments
+-ffinite-loops                                 -- assume all loops are finite
+-ffinite-math-only                             -- assume no NaNs or infinities are generated
+-ffixed-                                       -- mark <register> as being unavailable to the compiler
+-ffixed-form                                   -- process source files in fixed form
+-ffixed-line-length                            -- set column after which characters are ignored
+-ffixed-point                                  -- enable fixed point types
+-ffloat-store                                  -- don't allocate floats and doubles in extended- precision registers
+-ffor-scope                                    -- for scope
+-fforce-dwarf-frame                            -- always emit a debug frame section
+-fforce-emit-vtables                           -- emits more virtual tables to improve devirtualization
+-fforce-enable-int128                          -- enable support for int128_t type
+-fforward-propagate                            -- perform a forward propagation pass on RTL
+-ffp-contract                                  -- perform floating-point expression contraction
+-ffp-exception-behavior                        -- specifies the exception behavior of floating-point operations
+-ffp-int-builtin-inexact                       -- allow built-in functions ceil, floor, round, trunc to raise "inexact" exceptions
+-ffp-model                                     -- controls the semantics of floating-point calculations
+-ffpe-trap                                     -- fpe trap
+-ffree-form                                    -- process source files in free form
+-ffree-line-length                             -- free line length
+-ffreestanding                                 -- do not assume that standard C libraries and main exist
+-ffrontend-optimize                            -- frontend optimize
+-ffunction-cse                                 -- allow function addresses to be held in registers
+-ffunction-sections                            -- place each function into its own section
+-fgcse                                         -- perform global common subexpression elimination
+-fgcse-after-reload                            -- perform global common subexpression elimination after register allocation has finished
+-fgcse-las                                     -- perform redundant load after store elimination in global common subexpression elimination
+-fgcse-lm                                      -- perform enhanced load motion during global common subexpression elimination
+-fgcse-sm                                      -- perform store motion after global common subexpression elimination
+-fglobal-isel                                  -- enables the global instruction selector
+-fgnu-inline-asm                               -- gnu inline asm
+-fgnu-keywords                                 -- allow GNU-extension keywords regardless of language standard
+-fgnu-runtime                                  -- generate output compatible with the standard GNU Objective-C runtime
+-fgnu-tm                                       -- enable support for GNU transactional memory
+-fgnu89-inline                                 -- use traditional GNU semantics for inline functions
+-fgnuc-version                                 -- sets various macros to claim compatibility with the given GCC version
+-fgpu-allow-device-init                        -- allow device side init function in HIP
+-fgpu-defer-diag                               -- defer host/device related diagnostic messages for CUDA/HIP
+-fgpu-rdc                                      -- generate relocatable device code, also known as separate compilation mode
+-fgpu-sanitize                                 -- enable sanitizer for AMDGPU target
+-fgraphite                                     -- enable in and out of Graphite representation
+-fgraphite-identity                            -- enable Graphite Identity transformation
+-fguess-branch-probability                     -- enable guessing of branch probabilities
+-fheinous-gnu-extensions                       -- heinous GNU extensions
+-fhip-new-launch-api,                          -- -fno-hip-new-launch-api Use new kernel launching API for HIP
+-fhoist-adjacent-loads                         -- enable hoisting adjacent loads to encourage generating conditional move instructions
+-fhonor-infinites                              -- honor infinites
+-fhonor-infinities                             -- honor infinities
+-fhonor-nans                                   -- honor nans
+-fhosted                                       -- assume normal C execution environment
+-fident                                        -- emit metadata containing compiler name and version
+-fif-conversion                                -- perform conversion of conditional jumps to branchless equivalents
+-fif-conversion2                               -- perform conversion of conditional jumps to conditional execution
+-fignore-exceptions                            -- enable support for ignoring exception handling constructs
+-filelist                                      -- ilelist
+-fimplicit-module-maps                         -- implicit module maps
+-fimplicit-modules                             -- implicit modules
+-fimplicit-none                                -- no implicit typing allowed unless overridden by IMPLICIT statements
+-findirect-inlining                            -- perform indirect inlining
+-findirect-virtual-calls                       -- indirect virtual calls
+-finhibit-size-directive                       -- do not generate .size directives
+-finit-character                               -- init character
+-finit-integer                                 -- init integer
+-finit-local-zero                              -- init local zero
+-finit-logical                                 -- init logical
+-finit-real                                    -- init real
+-finline                                       -- enable inlining of function declared "inline", disabling disables all inlining
+-finline-atomics                               -- inline __atomic operations when a lock free instruction sequence is available
+-finline-functions                             -- integrate functions not declared "inline" into their callers when profitable
+-finline-functions-called-once                 -- integrate functions only required by their single caller
+-finline-hint-functions                        -- inline functions which are (explicitly or implicitly) marked inline
+-finline-limit                                 -- limit the size of inlined functions to <number>
+-finline-small-functions                       -- integrate functions into their callers when code size is known not to grow
+-finput-charset                                -- specify the default character set for source files
+-finstrument-function-entry-bare               -- instrument function entry only
+-finstrument-functions                         -- instrument function entry and exit with profiling calls
+-finstrument-functions-after-inlining          -- insert the calls after inlining
+-finstrument-functions-exclude-file-list       -- do not instrument functions listed in files
+-finstrument-functions-exclude-function-list   -- do not instrument listed functions
+-finteger-4-integer-8                          -- integer 4 integer 8
+-fintegrated-as                                -- enable the integrated assembler
+-fintegrated-cc1                               -- run cc1 in-process
+-fintrinsic-modules-path                       -- intrinsic modules path
+-fipa-bit-cp                                   -- perform interprocedural bitwise constant propagation
+-fipa-cp                                       -- perform interprocedural constant propagation
+-fipa-cp-clone                                 -- perform cloning to make Interprocedural constant propagation stronger
+-fipa-icf                                      -- perform Identical Code Folding for functions and read-only variables
+-fipa-icf-functions                            -- perform Identical Code Folding for functions
+-fipa-icf-variables                            -- perform Identical Code Folding for variables
+-fipa-profile                                  -- perform interprocedural profile propagation
+-fipa-pta                                      -- perform interprocedural points-to analysis
+-fipa-pure-const                               -- discover pure and const functions
+-fipa-ra                                       -- use caller save register across calls if possible
+-fipa-reference                                -- discover readonly and non addressable static variables
+-fipa-sra                                      -- perform interprocedural reduction of aggregates
+-fipa-vrp                                      -- perform IPA Value Range Propagation
+-fira-algorithm                                -- set the used IRA algorithm
+-fira-hoist-pressure                           -- use IRA based register pressure calculation in RTL hoist optimizations
+-fira-loop-pressure                            -- use IRA based register pressure calculation in RTL loop optimizations
+-fira-region                                   -- set regions for IRA
+-fira-share-save-slots                         -- share slots for saving different hard registers
+-fira-share-spill-slots                        -- share stack slots for spilled pseudo-registers
+-fira-verbose                                  -- control IRA's level of diagnostic messages
+-fisolate-erroneous-paths-attribute            -- detect paths that trigger erroneous or undefined behavior due to a null value being used in a wa
+-fisolate-erroneous-paths-dereference          -- detect paths that trigger erroneous or undefined behavior due to dereferencing a null pointer.  
+-fivopts                                       -- optimize induction variables on trees
+-fjump-tables                                  -- use jump tables for sufficiently large switch statements
+-fkeep-inline-functions                        -- generate code for functions even if they are fully inlined
+-fkeep-static-consts                           -- emit static const variables even if they are not used
+-flarge-sizes                                  -- use INTEGER(KIND=8) for the result type in size-related intrinsics
+-flat_namespace                                -- flat namespace
+-flax-vector-conversions                       -- allow implicit conversions between vectors with differing numbers of subparts and/or differing e
+-fleading-underscore                           -- give external symbols a leading underscore
+-flegacy-pass-manager                          -- use the legacy pass manager in LLVM
+-flifetime-dse                                 -- tell DSE that the storage for a C++ object is dead when the constructor starts and when the dest
+-flimited-precision                            -- limited precision
+-flive-range-shrinkage                         -- relief of register pressure through live range shrinkage
+-flogical-abbreviations                        -- enable logical abbreviations
+-floop-nest-optimize                           -- enable the loop nest optimizer
+-floop-parallelize-all                         -- mark all loops as parallel
+-flra-remat                                    -- do CFG-sensitive rematerialization in LRA
+-flto                                          -- generate output files suitable for link time optimization
+-flto-compression-level                        -- use specified zlib compression level for IL
+-flto-jobs                                     -- controls the backend parallelism
+-flto-odr-type-merging                         -- merge C++ types using One Definition Rule
+-flto-partition                                -- partition symbols and vars at linktime based on object files they originate from
+-flto-report                                   -- report various link-time optimization statistics
+-fmacro-backtrace-limit                        -- macro backtrace limit
+-fmacro-prefix-map                             -- remap file source paths in predefined preprocessor macros
+-fmath-errno                                   -- set errno after built-in math functions
+-fmax-array-constructor                        -- max array constructor
+-fmax-errors                                   -- maximum number of errors to report
+-fmax-identifier-length                        -- max identifier length
+-fmax-stack-var-size                           -- max stack var size
+-fmax-subrecord-length                         -- max subrecord length
+-fmax-tokens                                   -- max total number of preprocessed tokens for -Wmax-tokens
+-fmax-type-align                               -- specify the maximum alignment to enforce on pointers lacking an explicit alignment
+-fmem-report                                   -- report on permanent memory allocation
+-fmem-report-wpa                               -- report on permanent memory allocation in WPA only
+-fmemory-profile                               -- enable heap memory profiling and dump results into <directory>
+-fmerge-all-constants                          -- attempt to merge identical constants and constant variables
+-fmerge-constants                              -- attempt to merge identical constants across compilation units
+-fmerge-debug-strings                          -- attempt to merge identical debug strings across compilation units
+-fmessage-length                               -- limit diagnostics to <number> characters per line.  0 suppresses line-wrapping
+-fmodule-file                                  -- specify the mapping of module name to precompiled module file
+-fmodule-file-deps                             -- module file deps
+-fmodule-implementation-of                     -- module implementation of
+-fmodule-map-file                              -- load this module map file
+-fmodule-maps                                  -- implicitly search the file system for module map files.
+-fmodule-name                                  -- specify the name of the module to build
+-fmodule-private                               -- module private
+-fmodules                                      -- enable the modules language feature
+-fmodules-cache-path                           -- specify the module cache path
+-fmodules-decluse                              -- require declaration of modules used within a module
+-fmodules-disable-diagnostic-validation        -- disable validation of the diagnostic options when loading the module
+-fmodules-ignore-macro                         -- ignore the definition of the given macro when building and loading modules
+-fmodules-prune-after                          -- specify the interval after which a module file will be considered unused
+-fmodules-prune-interval                       -- specify the interval between attempts to prune the module cache
+-fmodules-search-all                           -- search even non-imported modules to resolve references
+-fmodules-strict-decluse                       -- requires all headers to be in modules
+-fmodules-ts                                   -- enable support for the C++ Modules TS
+-fmodules-user-build-path                      -- specify the module user build path
+-fmodules-validate-input-files-content         -- validate PCM input files based on content if mtime differs
+-fmodules-validate-once-per-build-session      -- don't verify input files for the modules
+-fmodules-validate-system-headers              -- validate the system headers that a module depends on when loading the module
+-fmodulo-sched                                 -- perform SMS based modulo scheduling before the first scheduling pass
+-fmodulo-sched-allow-regmoves                  -- perform SMS based modulo scheduling with register moves allowed
+-fmove-loop-invariants                         -- move loop invariant computations out of loops
+-fms-compatibility                             -- enable full Microsoft Visual C++ compatibility
+-fms-compatibility-version                     -- microsoft compiler version number
+-fms-extensions                                -- don't warn about uses of Microsoft extensions
+-fms-memptr-rep                                -- ms memptr rep
+-fms-volatile                                  -- ms volatile
+-fmsc-version                                  -- microsoft compiler version number to report
+-fmudflap                                      -- this switch lacks documentation
+-fmudflapir                                    -- this switch lacks documentation
+-fmudflapth                                    -- this switch lacks documentation
+-fnested-functions                             -- nested functions
+-fnew-alignment                                -- specifies the largest alignment guaranteed
+-fnext-runtime                                 -- next runtime
+-fno-builtin                                   -- disable implicit builtin knowledge of a specific function
+-fno-crash-diagnostics                         -- disable auto-generation of preprocessed source files and a script for reproduction during a clan
+-fno-ident                                     -- do not emit metadata containing compiler name and version
+-fno-limit-debug-info                          -- no limit debug info
+-fno-max-type-align                            -- no max type align
+-fno-stack-limit                               -- do not limit the size of the stack
+-fno-strict-modules-decluse                    -- no strict modules decluse
+-fno-temp-file                                 -- directly create compilation output files
+-fno-threadsafe-statics                        -- do not generate thread-safe code for initializing local statics
+-fno-working-directory                         -- no working directory
+-fno_modules-validate-input-files-content      -- no modules validate input files content
+-fno_pch-validate-input-files-content          -- no pch validate input files content
+-fnon-call-exceptions                          -- support synchronous non-call exceptions
+-fnothrow-opt                                  -- treat a throw() exception specification as noexcept to improve code size
+-fnoxray-link-deps                             -- no xray link deps
+-fobjc-abi-version                             -- set Objective-C ABI version
+-fobjc-arc                                     -- synthesize retain and release calls for Objective-C pointers
+-fobjc-arc-exceptions                          -- use EH-safe code when synthesizing retains and releases in -fobjc-arc
+-fobjc-convert-messages-to-runtime-calls       -- convert messages to runtime calls
+-fobjc-encode-cxx-class-template-spec          -- fully encode C++ class template specialization
+-fobjc-exceptions                              -- enable Objective-C exceptions
+-fobjc-infer-related-result-type               -- infer related result type
+-fobjc-legacy-dispatch                         -- use legacy dispatch
+-fobjc-link-runtime                            -- set link runtime
+-fobjc-nonfragile-abi                          -- set nonfragile abi
+-fobjc-nonfragile-abi-version                  -- set nonfragile abi version
+-fobjc-runtime                                 -- specify the target Objective-C runtime kind and version
+-fobjc-sender-dependent-dispatch               -- set sender dependent dispatch
+-fobjc-weak                                    -- enable ARC-style weak references in Objective-C
+-fomit-frame-pointer                           -- when possible do not generate stack frames
+-fopenacc                                      -- enable OpenACC
+-fopenmp                                       -- enable OpenMP (implies -frecursive in Fortran)
+-fopenmp-simd                                  -- enable OpenMP's SIMD directives
+-fopenmp-targets                               -- specify comma-separated list of triples OpenMP offloading targets to be supported
+-fopenmp-version                               -- openmp version
+-foperator-arrow-depth                         -- operator arrow depth
+-foperator-names                               -- treat C++ operator name keywords as synonyms for operators
+-fopt-info                                     -- enable all optimization info dumps on stderr
+-fopt-info-type                                -- dump compiler optimization details
+-foptimization-record-file                     -- specify the output name of the file containing the optimization remarks
+-foptimization-record-passes                   -- only include passes which match a specified regex
+-foptimize-sibling-calls                       -- optimize sibling and tail recursive calls
+-foptimize-strlen                              -- enable string length optimizations on trees
+-force_cpusubtype_ALL                          -- force cpusubtype all
+-force_flat_namespace                          -- force flat namespace
+-force_load                                    -- force load
+-forder-file-instrumentation                   -- generate instrumented code to collect order file
+-foutput-class-dir                             -- output class dir
+-fpack-derived                                 -- pack derived
+-fpack-struct                                  -- pack structure members together without holes
+-fpack-struct                                  -- set initial maximum structure member alignment
+-fparse-all-comments                           -- parse all comments
+-fpartial-inlining                             -- perform partial inlining
+-fpascal-strings                               -- recognize and construct Pascal-style string literals
+-fpass-plugin                                  -- load pass plugin from a dynamic shared object file
+-fpatchable-function-entry                     -- generate NOPs around function entry
+-fpcc-struct-return                            -- return small aggregates in memory, not registers
+-fpch-codegen                                  -- generate code for uses of this PCH
+-fpch-debuginfo                                -- generate debug info for types in an object file built from this PCH
+-fpch-deps                                     -- this switch lacks documentation
+-fpch-instantiate-templates                    -- instantiate templates already while building a PCH
+-fpch-preprocess                               -- look for and use PCH files even when preprocessing
+-fpch-validate-input-files-content             -- validate PCH input files based on content
+-fpeel-loops                                   -- perform loop peeling
+-fpeephole                                     -- enable machine specific peephole optimizations
+-fpeephole2                                    -- enable an RTL peephole pass before sched2
+-fpic                                          -- generate position-independent code if possible (small mode)
+-fpie                                          -- generate position-independent code for executables if possible (small mode)
+-fplan9-extensions                             -- enable Plan 9 language extensions
+-fplt                                          -- use PLT for PIC calls (-fno-plt- load the address from GOT at call site)
+-fplugin                                       -- specify a plugin to load
+-fplugin-arg-                                  -- specify argument <key>=<value> for plugin <name>
+-fpost-ipa-mem-report                          -- report on memory allocation before interprocedural optimization
+-fpre-ipa-mem-report                           -- report on memory allocation before interprocedural optimization
+-fprebuilt-implicit-modules                    -- look up implicit modules
+-fprebuilt-module-path                         -- specify the prebuilt module path
+-fpredictive-commoning                         -- run predictive commoning optimization
+-fprefetch-loop-arrays                         -- generate prefetch instructions, if available, for arrays in loops
+-fpreprocessed                                 -- treat the input file as already preprocessed
+-fpreserve-as-comments                         -- preserve as comments
+-fprintf-return-value                          -- treat known sprintf return values as constants
+-fproc-stat-report                             -- save subprocess statistics to the given file
+-fprofile                                      -- enable basic program profiling code
+-fprofile-arcs                                 -- insert arc-based program profiling code
+-fprofile-correction                           -- enable correction of flow inconsistent profile data input
+-fprofile-dir                                  -- set the top-level directory for storing the profile data
+-fprofile-exclude-files                        -- exclude files from profile
+-fprofile-filter-files                         -- filter files for profile
+-fprofile-generate                             -- enable common options for generating profile info for profile feedback directed optimizations
+-fprofile-instr-generate                       -- generate instrumented profile into file
+-fprofile-instr-use                            -- use instrumentation data for profile-guided optimization
+-fprofile-list                                 -- filename defining the list of items to instrument
+-fprofile-remapping-file                       -- use the remappings described in file in profile
+-fprofile-report                               -- report on consistency of profile
+-fprofile-sample-accurate                      -- specifies that the sample profile is accurate
+-fprofile-sample-use                           -- profile sample use
+-fprofile-update                               -- set update method of profile counters
+-fprofile-use                                  -- enable common options for performing profile feedback directed optimizations
+-fprofile-values                               -- insert code to profile values of expressions
+-fprotect-parens                               -- protect parens
+-fpseudo-probe-for-profiling                   -- emit pseudo probes for sample profiling
+-framework                                     -- include framework found in search path
+-frandom-seed                                  -- use <string> as random seed
+-frange-check                                  -- range check
+-freal-4-real-10                               -- real 4 real 10
+-freal-4-real-16                               -- real 4 real 16
+-freal-4-real-8                                -- real 4 real 8
+-freal-8-real-10                               -- real 8 real 10
+-freal-8-real-16                               -- real 8 real 16
+-freal-8-real-4                                -- real 8 real 4
+-frealloc-lhs                                  -- realloc lhs
+-freciprocal-math                              -- same as -fassociative-math for expressions which include division
+-frecord-command-line                          -- record command line
+-frecord-gcc-switches                          -- record gcc command line switches in the object file
+-frecord-marker                                -- record marker
+-frecursive                                    -- recursive
+-free                                          -- turn on Redundant Extensions Elimination pass
+-freg-struct-return                            -- return small aggregates in registers
+-fregister-global-dtors-with-atexit            -- use atexit to register global destructors
+-frelaxed-template-template-args               -- enable C++17 relaxed template template argument matching
+-frename-registers                             -- perform a register renaming optimization pass
+-freorder-blocks                               -- reorder basic blocks to improve code placement
+-freorder-blocks-algorithm                     -- set the used basic block reordering algorithm
+-freorder-blocks-and-partition                 -- reorder basic blocks and partition into hot and cold sections
+-freorder-functions                            -- reorder functions to improve code placement
+-frepack-arrays                                -- repack arrays
+-frequire-return-statement                     -- functions which return values must end with return statements
+-freroll-loops                                 -- turn on loop reroller
+-frerun-cse-after-loop                         -- add a common subexpression elimination pass after loop optimizations
+-freschedule-modulo-scheduled-loops            -- enable/disable the traditional scheduling in loops that already passed modulo scheduling
+-fretain-comments-from-system-headers          -- retain comments from system headers
+-frewrite-imports                              -- rewrite imports
+-frewrite-includes                             -- rewrite includes
+-frewrite-map-file                             -- rewrite map file
+-fropi                                         -- generate read-only position independent code (ARM only)
+-frounding-math                                -- disable optimizations that assume default FP rounding behavior
+-frtlib-add-rpath                              -- add -rpath with architecture-specific resource directory to the linker flags
+-frtti                                         -- generate run time type descriptor information
+-frtti-data                                    -- rtti data
+-frwpi                                         -- generate read-write position independent code (ARM only)
+-fsanitize                                     -- enable AddressSanitizer, a memory error detector
+-fsanitize-address-destructor-kind             -- set destructor type used in ASan instrumentation
+-fsanitize-address-field-padding               -- level of field padding for AddressSanitizer
+-fsanitize-address-globals-dead-stripping      -- enable linker dead stripping of globals in AddressSanitizer
+-fsanitize-address-poison-custom-array-cookie  -- enable poisoning array cookies when using custom operator new in AddressSanitizer
+-fsanitize-address-use-after-scope             -- enable use-after-scope detection in AddressSanitizer
+-fsanitize-address-use-odr-indicator           -- enable ODR indicator globals
+-fsanitize-blacklist                           -- path to blacklist file for sanitizers
+-fsanitize-cfi-canonical-jump-tables           -- make the jump table addresses canonical in the symbol table
+-fsanitize-cfi-cross-dso                       -- enable control flow integrity (CFI) checks for cross-DSO calls
+-fsanitize-cfi-icall-generalize-pointers       -- generalize pointers in CFI indirect call type signature checks
+-fsanitize-coverage                            -- specify the type of coverage instrumentation for Sanitizers
+-fsanitize-coverage-allowlist                  -- sanitize coverage allowlist
+-fsanitize-coverage-blacklist                  -- disable sanitizer coverage instrumentation
+-fsanitize-coverage-blocklist                  -- sanitize coverage blocklist
+-fsanitize-coverage-whitelist                  -- restrict sanitizer coverage instrumentation
+-fsanitize-hwaddress-abi                       -- select the HWAddressSanitizer ABI to target
+-fsanitize-link-c++-runtime                    -- sanitize link c++ runtime
+-fsanitize-link-runtime                        -- sanitize link runtime
+-fsanitize-memory-track-origins                -- enable origins tracking in MemorySanitizer
+-fsanitize-memory-use-after-dtor               -- enable use-after-destroy detection in MemorySanitizer
+-fsanitize-minimal-runtime                     -- sanitize minimal runtime
+-fsanitize-recover                             -- enable recovery for specified sanitizers
+-fsanitize-stats                               -- enable sanitizer statistics gathering
+-fsanitize-system-blacklist                    -- path to system blacklist file for sanitizers
+-fsanitize-thread-atomics                      -- enable atomic operations instrumentation in ThreadSanitizer (default)
+-fsanitize-thread-func-entry-exit              -- enable function entry/exit instrumentation in ThreadSanitizer
+-fsanitize-thread-memory-access                -- enable memory access instrumentation in ThreadSanitizer
+-fsanitize-trap                                -- enable trapping for specified sanitizers
+-fsanitize-undefined-strip-path-components     -- strip a given number of path components when emitting check metadata
+-fsanitize-undefined-trap-on-error             -- equivalent to -fsanitize-trap=undefined
+-fsave-optimization-record                     -- generate an optimization record file in a specific format
+-fsched-critical-path-heuristic                -- enable the critical path heuristic in the scheduler
+-fsched-dep-count-heuristic                    -- enable the dependent count heuristic in the scheduler
+-fsched-group-heuristic                        -- enable the group heuristic in the scheduler
+-fsched-interblock                             -- enable scheduling across basic blocks
+-fsched-last-insn-heuristic                    -- enable the last instruction heuristic in the scheduler
+-fsched-pressure                               -- enable register pressure sensitive insn scheduling
+-fsched-rank-heuristic                         -- enable the rank heuristic in the scheduler
+-fsched-spec                                   -- allow speculative motion of non-loads
+-fsched-spec-insn-heuristic                    -- enable the speculative instruction heuristic in the scheduler
+-fsched-spec-load                              -- allow speculative motion of some loads
+-fsched-spec-load-dangerous                    -- allow speculative motion of more loads
+-fsched-stalled-insns                          -- allow premature scheduling of queued insns
+-fsched-stalled-insns                          -- set number of queued insns that can be prematurely scheduled
+-fsched-stalled-insns-dep                      -- set dependence distance checking in premature scheduling of queued insns
+-fsched-stalled-insns-dep                      -- set dependence distance checking in premature scheduling of queued insns
+-fsched-verbose                                -- set the verbosity level of the scheduler
+-fsched2-use-superblocks                       -- if scheduling post reload, do superblock scheduling
+-fschedule-fusion                              -- perform a target dependent instruction fusion optimization pass
+-fschedule-insns                               -- reschedule instructions before register allocation
+-fschedule-insns2                              -- reschedule instructions after register allocation
+-fsecond-underscore                            -- second underscore
+-fsection-anchors                              -- access data in the same section from shared anchor points
+-fseh-exceptions                               -- use SEH style exceptions
+-fsel-sched-pipelining                         -- perform software pipelining of inner loops during selective scheduling
+-fsel-sched-pipelining-outer-loops             -- perform software pipelining of outer loops during selective scheduling
+-fsel-sched-reschedule-pipelined               -- reschedule pipelined regions without pipelining
+-fselective-scheduling                         -- schedule instructions using selective scheduling algorithm
+-fselective-scheduling2                        -- run selective scheduling after reload
+-fsemantic-interposition                       -- semantic interposition
+-fshort-double                                 -- use the same size for double as for float
+-fshort-enums                                  -- use the narrowest integer type possible for enumeration types
+-fshort-wchar                                  -- force the underlying type for "wchar_t" to be "unsigned short"
+-fshow-column                                  -- show column numbers in diagnostics, when available
+-fshow-overloads                               -- which overload candidates to show when overload resolution fails
+-fshow-source-location                         -- show source location
+-fshrink-wrap                                  -- emit function prologues only before parts of the function that need it, rather than at the top o
+-fshrink-wrap-separate                         -- shrink-wrap parts of the prologue and epilogue separately
+-fsign-zero                                    -- sign zero
+-fsignaling-math                               -- signaling math
+-fsignaling-nans                               -- disable optimizations observable by IEEE signaling NaNs
+-fsigned-bitfields                             -- when signed or unsigned is not given make the bitfield signed
+-fsigned-char                                  -- make char signed by default
+-fsigned-zeros                                 -- disable floating point optimizations that ignore the IEEE signedness of zero
+-fsimd-cost-model                              -- specifies the vectorization cost model for code marked with a simd directive
+-fsingle-precision-constant                    -- convert floating point constants to single precision constants
+-fsized-deallocation                           -- enable C++14 sized global deallocation functions
+-fsjlj-exceptions                              -- use SjLj style exceptions
+-fslp-vectorize                                -- enable the superword-level parallelism vectorization passes
+-fspell-checking                               -- spell checking
+-fspell-checking-limit                         -- spell checking limit
+-fsplit-dwarf-inlining                         -- provide minimal debug info in the object
+-fsplit-ivs-in-unroller                        -- split lifetimes of induction variables when loops are unrolled
+-fsplit-loops                                  -- perform loop splitting
+-fsplit-lto-unit                               -- enables splitting of the LTO unit
+-fsplit-machine-functions                      -- enable late function splitting using profile information
+-fsplit-paths                                  -- split paths leading to loop backedges
+-fsplit-stack                                  -- generate discontiguous stack frames
+-fsplit-wide-types                             -- split wide types into independent registers
+-fssa-backprop                                 -- enable backward propagation of use properties at the SSA level
+-fssa-phiopt                                   -- optimize conditional patterns using SSA PHI nodes
+-fstack-arrays                                 -- stack arrays
+-fstack-check                                  -- insert stack checking code into the program.  -fstack-check=specific if to argument given
+-fstack-clash-protection                       -- enable stack clash protection
+-fstack-limit-register                         -- trap if the stack goes past <register>
+-fstack-limit-symbol                           -- trap if the stack goes past symbol <name>
+-fstack-protector                              -- use propolice as a stack protection method
+-fstack-protector-all                          -- use a stack protection method for every function
+-fstack-protector-explicit                     -- use stack protection method only for functions with the stack_protect attribute
+-fstack-protector-strong                       -- use a smart stack protection method for certain functions
+-fstack-reuse                                  -- set stack reuse level for local variables
+-fstack-size-section                           -- emit section containing metadata on function stack sizes
+-fstack-usage                                  -- output stack usage information on a per-function basis
+-fstandalone-debug                             -- emit full debug info for all types used by the program
+-fstdarg-opt                                   -- optimize amount of stdarg registers saved to stack at start of function
+-fstore-merging                                -- merge adjacent stores
+-fstrict-aliasing                              -- assume strict aliasing rules apply
+-fstrict-enums                                 -- assume that values of enumeration type are always within the minimum range of that type
+-fstrict-float-cast-overflow                   -- assume that overflowing float-to-int casts are undefined
+-fstrict-overflow                              -- treat signed overflow as undefined
+-fstrict-return                                -- strict return
+-fstrict-volatile-bitfields                    -- force bitfield accesses to match their type width
+-fstrict-vtable-pointers                       -- enable optimizations based on the strict vtables
+-fstruct-path-tbaa                             -- struct path tbaa
+-fsycl                                         -- enable SYCL kernels compilation for device
+-fsymbol-partition                             -- symbol partition
+-fsync-libcalls                                -- implement __atomic operations via libcalls to legacy __sync functions
+-fsyntax-only                                  -- check for syntax errors, then stop
+-fsystem-module                                -- build this module as a system module. only used with -emit-module
+-ftabstop                                      -- distance between tab stops for column reporting
+-ftemplate-backtrace-limit                     -- template backtrace limit
+-ftemplate-depth                               -- template depth
+-ftemplate-depth-                              -- template depth
+-fterminated-vtables                           -- terminated vtables
+-ftest-coverage                                -- create data files needed by "gcov"
+-fthin-link-bitcode                            -- write minimized bitcode to <file>
+-fthinlto-index                                -- perform ThinLTO importing using provided index
+-fthread-jumps                                 -- perform jump threading optimizations
+-fthreadsafe-statics                           -- threadsafe statics
+-ftime-report                                  -- report the time taken by each compiler pass
+-ftime-trace                                   -- turn on time profiler
+-ftime-trace-granularity                       -- minimum time granularity traced by time profiler
+-ftls-model                                    -- set the default thread-local storage code generation model
+-ftracer                                       -- perform superblock formation via tail duplication
+-ftrack-macro-expansion                        -- track locations of tokens coming from macro expansion and display them in error messages
+-ftrap-function                                -- issue call to specified function rather than a trap instruction
+-ftrapping-math                                -- assume floating-point operations can trap
+-ftrapv                                        -- trap for signed overflow in addition, subtraction and multiplication
+-ftrapv-handler                                -- specify the function to be called on overflow
+-ftree-bit-ccp                                 -- enable SSA-BIT-CCP optimization on trees
+-ftree-builtin-call-dce                        -- enable conditional dead code elimination for builtin calls
+-ftree-ccp                                     -- enable SSA-CCP optimization on trees
+-ftree-ch                                      -- enable loop header copying on trees
+-ftree-coalesce-vars                           -- enable SSA coalescing of user variables
+-ftree-copy-prop                               -- enable copy propagation on trees
+-ftree-cselim                                  -- transform condition stores into unconditional ones
+-ftree-dce                                     -- enable SSA dead code elimination optimization on trees
+-ftree-dominator-opts                          -- enable dominator optimizations
+-ftree-dse                                     -- enable dead store elimination
+-ftree-forwprop                                -- enable forward propagation on trees
+-ftree-fre                                     -- enable Full Redundancy Elimination (FRE) on trees
+-ftree-loop-distribute-patterns                -- enable loop distribution for patterns transformed into a library call
+-ftree-loop-distribution                       -- enable loop distribution on trees
+-ftree-loop-if-convert                         -- convert conditional jumps in innermost loops to branchless equivalents
+-ftree-loop-im                                 -- enable loop invariant motion on trees
+-ftree-loop-ivcanon                            -- create canonical induction variables in loops
+-ftree-loop-linear                             -- enable loop interchange transforms.  Same as  -floop-interchange
+-ftree-loop-optimize                           -- enable loop optimizations on tree level
+-ftree-loop-vectorize                          -- enable loop vectorization on trees
+-ftree-lrs                                     -- perform live range splitting during the SSA- >normal pass
+-ftree-parallelize-loops                       -- enable automatic parallelization of loops
+-ftree-partial-pre                             -- in SSA-PRE optimization on trees, enable partial- partial redundancy elimination
+-ftree-phiprop                                 -- enable hoisting loads from conditional pointers
+-ftree-pre                                     -- enable SSA-PRE optimization on trees
+-ftree-pta                                     -- perform function-local points-to analysis on trees
+-ftree-reassoc                                 -- enable reassociation on tree level
+-ftree-scev-cprop                              -- enable copy propagation of scalar-evolution information
+-ftree-sink                                    -- enable SSA code sinking on trees
+-ftree-slp-vectorize                           -- enable basic block vectorization (SLP) on trees
+-ftree-slsr                                    -- perform straight-line strength reduction
+-ftree-sra                                     -- perform scalar replacement of aggregates
+-ftree-switch-conversion                       -- perform conversions of switch initializations
+-ftree-tail-merge                              -- enable tail merging on trees
+-ftree-ter                                     -- replace temporary expressions in the SSA->normal pass
+-ftree-vectorize                               -- enable vectorization on trees
+-ftree-vrp                                     -- perform Value Range Propagation on trees
+-ftrigraphs                                    -- process trigraph sequences
+-ftrivial-auto-var-init                        -- initialize trivial automatic stack variables
+-ftrivial-auto-var-init-stop-after             -- stop initializing trivial automatic stack variables after the specified number of instances
+-funconstrained-commons                        -- assume common declarations may be overridden with ones with a larger trailing array
+-funderscoring                                 -- underscoring
+-funique-basic-block-section-names             -- use unique names for basic block sections
+-funique-internal-linkage-names                -- uniqueify Internal Linkage Symbol Names
+-funique-section-names                         -- unique section names
+-funit-at-a-time                               -- unit at a time
+-funroll-all-loops                             -- perform loop unrolling for all loops
+-funroll-loops                                 -- perform loop unrolling when iteration count is known
+-funsafe-loop-optimizations                    -- allow loop optimizations to assume that the loops behave in normal way
+-funsafe-math-optimizations                    -- allow math optimizations that may violate IEEE or ISO standards
+-funsigned-bitfields                           -- when signed or unsigned is not given make the bitfield unsigned
+-funsigned-char                                -- make char unsigned by default
+-funswitch-loops                               -- perform loop unswitching
+-funwind-tables                                -- just generate unwind tables for exception handling
+-fuse-cuid                                     -- method to generate ids for compilation units for single source offloading languages CUDA and HIP
+-fuse-cxa-atexit                               -- use cxa atexit
+-fuse-init-array                               -- use init array
+-fuse-ld                                       -- use the specified linker instead of the default linker
+-fuse-line-directives                          -- use #line in preprocessed output
+-fuse-linker-plugin                            -- use linker plugin during link-time optimization
+-fvalidate-ast-input-files-content             -- compute and store the hash of input files used to build an AST
+-fvar-tracking                                 -- perform variable tracking
+-fvar-tracking-assignments                     -- perform variable tracking by annotating assignments
+-fvar-tracking-assignments-toggle              -- toggle -fvar-tracking-assignments
+-fvar-tracking-uninit                          -- perform variable tracking and also tag variables that are uninitialized
+-fvariable-expansion-in-unroller               -- apply variable expansion when loops are unrolled
+-fveclib                                       -- use the given vector functions library
+-fvect-cost-model                              -- specifies the cost model for vectorization
+-fvectorize                                    -- enable the loop vectorization passes
+-fverbose-asm                                  -- add extra commentary to assembler output
+-fvirtual-function-elimination                 -- enables dead virtual function elimination optimization
+-fvisibility                                   -- set the default symbol visibility
+-fvisibility-dllexport                         -- the visibility for dllexport definitions
+-fvisibility-externs-dllimport                 -- the visibility for dllimport external declarations
+-fvisibility-externs-nodllstorageclass         -- the visibility for external declarations without an explicit DLL dllstorageclass
+-fvisibility-from-dllstorageclass              -- set the visibility of symbols in the generated code from their DLL storage class
+-fvisibility-global-new-delete-hidden          -- give global C++ operator new and delete declarations hidden visibility
+-fvisibility-inlines-hidden                    -- give inline C++ member functions hidden visibility by default
+-fvisibility-inlines-hidden-static-local-var   -- visibility inlines hidden static local var
+-fvisibility-ms-compat                         -- give global types and functions a specific visibility
+-fvisibility-nodllstorageclass                 -- the visibility for defintiions without an explicit DLL export class
+-fvpt                                          -- use expression value profiles in optimizations
+-fwasm-exceptions                              -- use WebAssembly style exceptions
+-fweb                                          -- construct webs and split unrelated uses of single variable
+-fwhole-file                                   -- whole file
+-fwhole-program                                -- perform whole program optimizations
+-fwhole-program-vtables                        -- enables whole-program vtable optimization
+-fwide-exec-charset                            -- convert all wide strings and character constants to character set
+-fworking-directory                            -- generate a #line directive pointing at the current working directory
+-fwrapv                                        -- assume signed arithmetic overflow wraps around
+-fwritable-strings                             -- store string literals as writable data
+-fxl-pragma-pack                               -- enable IBM XL #pragma pack handling
+-fxor-operator                                 -- enable .XOR. as a synonym of .NEQV.
+-fxray-always-emit-customevents                -- always emit xray customevent calls
+-fxray-always-emit-typedevents                 -- always emit xray typedevents calls
+-fxray-always-instrument                       -- file defining xray always instrument
+-fxray-attr-list                               -- file defining the list of xray attributes
+-fxray-function-groups                         -- only instrument 1 of N groups
+-fxray-function-index                          -- xray function index
+-fxray-ignore-loops                            -- don't instrument functions with loops unless they also meet the minimum function size
+-fxray-instruction-threshold                   -- sets the minimum function size to instrument with XRay
+-fxray-instrument                              -- generate XRay instrumentation sleds on function entry and exit
+-fxray-instrumentation-bundle                  -- select which XRay instrumentation points to emit
+-fxray-link-deps                               -- tells clang to add the link dependencies for XRay
+-fxray-modes                                   -- list of modes to link in by default into XRay instrumented binaries
+-fxray-never-instrument                        -- file defining the whitelist for Xray attributes
+-fxray-selected-function-group                 -- select which group of functions to instrument
+-fzero-initialized-in-bss                      -- put zero initialized data in the bss section
+-fzvector                                      -- enable System z vector language extension
+-g                                             -- generate debug information
+-gcc-toolchain                                 -- use the gcc toolchain at the given directory
+-gcodeview                                     -- generate CodeView debug information
+-gcodeview-ghash                               -- emit type record hashes is a .debug section
+-gcolumn-info                                  -- column info
+-gdwarf-aranges                                -- DWARF aranges
+-gembed-source                                 -- embed source text in DWARF debug sections
+-gfull                                         -- emit debugging information for all symbols and types
+-ggnu-pubnames                                 -- gnu pubnames
+-ginline-line-tables                           -- inline line tables
+-gline-directives-only                         -- emit debug line info directives only
+-gline-tables-only                             -- line tables only
+-glldb                                         -- lldb
+-gmlt                                          -- emit debug line number tables only
+-gmodules                                      -- generate debug info with external references
+-gno-codeview-ghash                            -- emit type record hashes is a .debug section
+-gno-column-info                               -- no column info
+-gno-embed-source                              -- no embed source
+-gno-gnu-pubnames                              -- no gnu pubnames
+-gno-inline-line-tables                        -- no inline line tables
+-gno-pubnames                                  -- don't generate DWARF pubnames and pubtypes sections
+-gno-record-command-line                       -- no record command line
+-gno-record-gcc-switches                       -- don't record gcc command line switches in DWARF DW_AT_producer
+-gno-split-dwarf                               -- don't generate debug information in separate .dwo files
+-gno-strict-dwarf                              -- emit DWARF additions beyond selected version
+-gpubnames                                     -- generate DWARF pubnames and pubtypes sections
+-grecord-command-line                          -- record command line
+-grecord-gcc-switches                          -- record gcc command line switches in DWARF DW_AT_producer
+-gsce                                          -- sce
+-gsplit-dwarf                                  -- generate debug information in separate .dwo files
+-gstrict-dwarf                                 -- don't emit DWARF additions beyond selected version
+-gtoggle                                       -- toggle debug information generation
+-gused                                         -- emit debugging information for symbols that are used
+-gvms                                          -- generate debug information in VMS format
+-gz                                            -- DWARF debug sections compression type
+-headerpad_max_install_names                   -- headerpad max install names
+-help                                          -- display this information
+-ibuiltininc                                   -- enable builtin #include directories even when -nostdinc is used before or after -ibuiltininc
+-idirafter                                     -- add directory after include search path
+-iframework                                    -- add directory to SYSTEM framework search path
+-iframeworkwithsysroot                         -- add directory to SYSTEM framework search path, absolute paths are relative to -isysroot
+-imacros                                       -- include macros from file before parsing
+-image_base                                    -- image base
+-imultiarch                                    -- set <dir> to be the multiarch include subdirectory
+-imultilib                                     -- set dir to be the multilib include subdirectory
+-include                                       -- include file before parsing
+-include-pch                                   -- include precompiled header file
+-index-header-map                              -- make the next included directory (-I or -F) an indexer header map
+-init                                          -- init
+-install_name                                  -- install name
+-integrated-as                                 -- integrated as
+-interface-stub-version                        -- interface stub version
+-iplugindir                                    -- set <dir> to be the default plugin directory
+-iprefix                                       -- set the -iwithprefix prefix
+-iquote                                        -- add dir to the end of the quote include path
+-isysroot                                      -- set dir to be the system root directory
+-isystem                                       -- add directory to system include search path
+-isystem-after                                 -- add directory to end of the SYSTEM include search path
+-ivfsoverlay                                   -- overlay the virtual filesystem described by file over the real file system
+-iwithprefix                                   -- set directory to system include search path with prefix
+-iwithprefixbefore                             -- set directory to include search path with prefix
+-iwithsysroot                                  -- add directory to SYSTEM include search path
+-keep_private_externs                          -- keep private externs
+-l                                             -- include library found in search path
+-lang-asm                                      -- set lang asm
+-lazy_framework                                -- lazy framework
+-lazy_library                                  -- lazy library
+-m128bit-long-double                           -- sizeof(long double) is 16
+-m16                                           -- generate 16bit i386 code
+-m32                                           -- generate 32bit i386 code
+-m3dnow                                        -- support 3DNow! built-in functions
+-m3dnowa                                       -- support Athlon 3Dnow! built-in functions
+-m64                                           -- generate 64bit x86-64 code
+-m80387                                        -- use hardware fp
+-m8bit-idiv                                    -- expand 32bit/64bit integer divide into 8bit unsigned integer divide with run-time check
+-m96bit-long-double                            -- sizeof(long double) is 12
+-mabi                                          -- generate code that conforms to the given ABI
+-mabm                                          -- support code generation of Advanced Bit Manipulation (ABM) instructions
+-maccumulate-outgoing-args                     -- reserve space for outgoing arguments in the function prologue
+-maddress-mode                                 -- use given address mode
+-madx                                          -- support flag-preserving add-carry instructions
+-maes                                          -- support AES built-in functions and code generation
+-maix-struct-return                            -- return all structs in memory
+-malign-branch                                 -- specify types of branches to align
+-malign-branch-boundary                        -- specify the boundary's size to align branches
+-malign-data                                   -- use the given data alignment
+-malign-double                                 -- align some doubles on dword boundary
+-malign-functions                              -- function starts are aligned to this power of 2
+-malign-jumps                                  -- jump targets are aligned to this power of 2
+-malign-loops                                  -- loop code aligned to this power of 2
+-malign-stringops                              -- align destination of the string operations
+-mamx-bf16                                     -- amx bf16
+-mamx-int8                                     -- amx int8
+-mamx-tile                                     -- amx tile
+-mandroid                                      -- generate code for the Android platform
+-mappletvos-version-min                        -- appletvos version min
+-mappletvsimulator-version-min                 -- appletvsimulator version min
+-march                                         -- generate instructions for CPU type
+-masm                                          -- use given assembler dialect
+-mavx                                          -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2 and AVX built-in functions and code generati
+-mavx2                                         -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX and AVX2 built-in functions and code ge
+-mavx256-split-unaligned-load                  -- split 32-byte AVX unaligned load
+-mavx256-split-unaligned-store                 -- split 32-byte AVX unaligned store
+-mavx5124fmaps                                 -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2, AVX512F and AVX5124FMAPS built- 
+-mavx5124vnniw                                 -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2, AVX512F and AVX5124VNNIW built- 
+-mavx512bf16                                   -- avx512bf16
+-mavx512bitalg                                 -- avx512bitalg
+-mavx512bw                                     -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512BW built- i
+-mavx512cd                                     -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512CD built- i
+-mavx512dq                                     -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512DQ built- i
+-mavx512er                                     -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512ER built- i
+-mavx512f                                      -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F built-in functions an
+-mavx512ifma                                   -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512IFMA built-
+-mavx512pf                                     -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512PF built- i
+-mavx512vbmi                                   -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512VBMI built-
+-mavx512vbmi2                                  -- avx512vbmi2
+-mavx512vl                                     -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 and AVX512F and AVX512VL built- i
+-mavx512vnni                                   -- avx512vnni
+-mavx512vp2intersect                           -- avx512vp2intersect
+-mavx512vpopcntdq                              -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2, AVX512F and AVX512VPOPCNTDQ buil
+-mavxvnni                                      -- avxvnni
+-mbackchain                                    -- link stack frames through backchain on System Z
+-mbig-endian                                   -- big endian
+-mbionic                                       -- use Bionic C library
+-mbmi                                          -- support BMI built-in functions and code generation
+-mbmi2                                         -- support BMI2 built-in functions and code generation
+-mbranch-cost                                  -- branches are this expensive (1-5, arbitrary units)
+-mbranch-protection                            -- enforce targets of indirect branches and function returns
+-mbranches-within-32B-boundaries               -- align selected branches within 32-byte boundary
+-mcld                                          -- generate cld instruction in the function prologue
+-mcldemote                                     -- cldemote
+-mclflushopt                                   -- support CLFLUSHOPT instructions
+-mclwb                                         -- support CLWB instruction
+-mclzero                                       -- support CLZERO built-in functions and code generation
+-mcmodel                                       -- use given x86-64 code model
+-mcode-object-v3                               -- legacy option to specify code object ABI V3
+-mcode-object-version                          -- specify code object ABI version
+-mconsole                                      -- console
+-mcpu                                          -- set CPU type
+-mcrc                                          -- allow use of CRC instructions
+-mcrc32                                        -- support code generation of crc32 instruction
+-mcx16                                         -- support code generation of cmpxchg16b instruction
+-mdefault-build-attributes                     -- default build attributes
+-mdispatch-scheduler                           -- do dispatch scheduling if processor is bdver1, bdver2, bdver3, bdver4 or znver1 and Haifa schedu
+-mdll                                          -- dll
+-mdouble                                       -- force double to be 32 bits or 64 bits
+-mdynamic-no-pic                               -- dynamic no pic
+-meabi                                         -- set EABI type
+-menable-experimental-extensions               -- enable use of experimental RISC-V extensions
+-menable-unsafe-fp-math                        -- allow unsafe floating-point math optimizations which may decrease precision
+-menqcmd                                       -- enqcmd
+-mf16c                                         -- support F16C built-in functions and code generation
+-mfancy-math-387                               -- generate sin, cos, sqrt for FPU
+-mfentry                                       -- emit profiling counter call at function entry before prologue
+-mfix-cortex-a53-835769                        -- workaround Cortex-A53 erratum 835769
+-mfloat-abi                                    -- float abi
+-mfma                                          -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX and FMA built-in functions and code gen
+-mfma4                                         -- support FMA4 built-in functions and code generation
+-mforce-drap                                   -- always use Dynamic Realigned Argument Pointer (DRAP) to realign stack
+-mfp-ret-in-387                                -- return values of functions in FPU registers
+-mfpmath                                       -- generate floating point mathematics using given instruction set
+-mfpu                                          -- fpu
+-mfsgsbase                                     -- support FSGSBASE built-in functions and code generation
+-mfunction-return                              -- convert function return to call and return thunk
+-mfxsr                                         -- support FXSAVE and FXRSTOR instructions
+-mgeneral-regs-only                            -- generate code which uses only the general registers
+-mgfni                                         -- gfni
+-mglibc                                        -- use GNU C library
+-mglobal-merge                                 -- enable merging of globals
+-mhard-float                                   -- use hardware fp
+-mharden-sls                                   -- select straight-line speculation hardening scope
+-mhle                                          -- support Hardware Lock Elision prefixes
+-mhreset                                       -- hreset
+-mhwdiv                                        -- hwdiv
+-mhwmult                                       -- hwmult
+-miamcu                                        -- generate code that conforms to Intel MCU psABI
+-mieee-fp                                      -- use IEEE math for fp comparisons
+-mignore-xcoff-visibility                      -- do not emit the visibility attribute for asm
+-mimplicit-float                               -- implicit float
+-mimplicit-it                                  -- implicit it
+-mincoming-stack-boundary                      -- assume incoming stack aligned to this power of 2
+-mincremental-linker-compatible                -- emit an object file which can be used with an incremental linker
+-mindirect-branch                              -- convert indirect call and jump to call and return thunks
+-mindirect-branch-register                     -- force indirect call and jump via register
+-minline-all-stringops                         -- inline all known string operations
+-minline-stringops-dynamically                 -- inline memset/memcpy string operations, but perform inline version only for small blocks
+-minvpcid                                      -- invpcid
+-mios-simulator-version-min                    -- ios simulator version min
+-mios-version-min                              -- ios version min
+-miphoneos-version-min                         -- iphoneos version min
+-miphonesimulator-version-min                  -- iphonesimulator version min
+-mkernel                                       -- kernel
+-mkl                                           -- kl
+-mlarge-data-threshold                         -- data greater than given threshold will go into .ldata section in x86-64 medium model
+-mlinker-version                               -- linker version
+-mlittle-endian                                -- little endian
+-mllvm                                         -- additional arguments to forward to LLVM's option processing
+-mlong-calls                                   -- generate branches with extended addressability
+-mlong-double-128                              -- use 128-bit long double
+-mlong-double-64                               -- use 64-bit long double
+-mlong-double-80                               -- use 80-bit long double
+-mlvi-cfi                                      -- enable only control-flow mitigations for Load Value Injection
+-mlvi-hardening                                -- enable all mitigations for Load Value Injection
+-mlwp                                          -- support LWP built-in functions and code generation
+-mlzcnt                                        -- support LZCNT built-in function and code generation
+-mmacos-version-min                            -- set Mac OS X deployment target
+-mmacosx-version-min                           -- macosx version min
+-mmcu                                          -- mcu
+-mmemcpy-strategy                              -- specify memcpy expansion strategy when expected size is known
+-mmemset-strategy                              -- specify memcpy expansion strategy when expected size is known
+-mmitigate-rop                                 -- attempt to avoid generating instruction sequences containing ret bytes
+-mmmx                                          -- support MMX built-in functions
+-mmovbe                                        -- support code generation of movbe instruction
+-mmovdir64b                                    -- movdir64b
+-mmovdiri                                      -- movdiri
+-mmpx                                          -- support MPX code generation
+-mms-bitfields                                 -- use native (MS) bitfield layout
+-mmusl                                         -- use musl C library
+-mmwaitx                                       -- support MWAITX and MONITORX built-in functions and code generation
+-mno-default                                   -- clear all tune features
+-mno-sse4                                      -- do not support SSE4.1 and SSE4.2 built-in functions and code generation
+-mnop-mcount                                   -- generate mcount/__fentry__ calls as nops. To activate they need to be patched in
+-module-dependency-dir                         -- directory to dump module dependencies to
+-module-dir                                    -- odule dir
+-module-file-info                              -- provide information about a particular module file
+-momit-leaf-frame-pointer                      -- omit the frame pointer in leaf functions
+-moslib                                        -- oslib
+-moutline-atomics                              -- generate local calls to out-of-line atomic operations
+-mpacked-stack                                 -- use packed stack layout
+-mpad-max-prefix-size                          -- specify maximum number of prefixes to use for padding
+-mpc32                                         -- set 80387 floating-point precision to 32-bit
+-mpc64                                         -- set 80387 floating-point precision to 64-bit
+-mpc80                                         -- set 80387 floating-point precision to 80-bit
+-mpclmul                                       -- support PCLMUL built-in functions and code generation
+-mpconfig                                      -- pconfig
+-mpie-copy-relocations                         -- pie copy relocations
+-mpku                                          -- support PKU built-in functions and code generation
+-mpopcnt                                       -- support code generation of popcnt instruction
+-mprefer-avx128                                -- use 128-bit AVX instructions instead of 256-bit AVX instructions in the auto-vectorizer
+-mprefer-vector-width                          -- specifies preferred vector width
+-mpreferred-stack-boundary                     -- attempt to keep stack aligned to this power of 2
+-mprefetchwt1                                  -- support PREFETCHWT1 built-in functions and code generation
+-mprfchw                                       -- support PREFETCHW instruction
+-mptwrite                                      -- ptwrite
+-mpush-args                                    -- use push instructions to save outgoing arguments
+-mqdsp6-compat                                 -- enable hexagon-qdsp6 backward compatibility
+-mrdpid                                        -- support RDPID built-in functions and code generation
+-mrdrnd                                        -- support RDRND built-in functions and code generation
+-mrdseed                                       -- support RDSEED instruction
+-mrecip                                        -- control generation of reciprocal estimates
+-mrecip                                        -- generate reciprocals instead of divss and sqrtss
+-mrecord-mcount                                -- generate __mcount_loc section with all mcount or __fentry__ calls
+-mred-zone                                     -- use red-zone in the x86-64 code
+-mreg-alloc                                    -- control the default allocation order of integer registers
+-mregparm                                      -- number of registers used to pass integer arguments
+-mrelax                                        -- enable linker relaxation
+-mrelax-all                                    -- relax all machine instructions
+-mretpoline                                    -- retpoline
+-mretpoline-external-thunk                     -- retpoline external thunk
+-mrtd                                          -- alternate calling convention
+-mrtm                                          -- support RTM built-in functions and code generation
+-msahf                                         -- support code generation of sahf instruction in 64bit x86-64 code
+-mserialize                                    -- serialize
+-mseses                                        -- enable speculative execution side effect suppression (SESES)
+-msgx                                          -- support SGX built-in functions and code generation
+-msha                                          -- support SHA1 and SHA256 built-in functions and code generation
+-mshstk                                        -- shstk
+-msign-return-address                          -- select return address signing scope
+-msim                                          -- sim
+-mskip-rax-setup                               -- skip setting up RAX register when passing variable arguments
+-msmall-data-limit                             -- put objects of at most size bytes into small data section
+-msmall-data-threshold                         -- put objects of at most size bytes into small data section
+-msoft-float                                   -- do not use hardware fp
+-mspeculative-load-hardening                   -- speculative load hardening
+-msse                                          -- support MMX and SSE built-in functions and code generation
+-msse2                                         -- support MMX, SSE and SSE2 built-in functions and code generation
+-msse2avx                                      -- encode SSE instructions with VEX prefix
+-msse3                                         -- support MMX, SSE, SSE2 and SSE3 built-in functions and code generation
+-msse4                                         -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1 and SSE4.2 built-in functions and code generation
+-msse4.1                                       -- support MMX, SSE, SSE2, SSE3, SSSE3 and SSE4.1 built-in functions and code generation
+-msse4.2                                       -- support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1 and SSE4.2 built-in functions and code generation
+-msse4a                                        -- support MMX, SSE, SSE2, SSE3 and SSE4A built-in functions and code generation
+-msseregparm                                   -- use SSE register passing conventions for SF and DF mode
+-mssse3                                        -- support MMX, SSE, SSE2, SSE3 and SSSE3 built-in functions and code generation
+-mstack-alignment                              -- set the stack alignment
+-mstack-arg-probe                              -- enable stack probing
+-mstack-probe-size                             -- set the stack probe size
+-mstack-protector-guard                        -- use given stack-protector guard
+-mstack-protector-guard-offset                 -- use the given offset for addressing the stack-protector guard
+-mstack-protector-guard-reg                    -- use the given reg for addressing the stack-protector guard
+-mstackrealign                                 -- realign stack in prologue
+-mstringop-strategy                            -- chose strategy to generate stringop using
+-mstv                                          -- disable Scalar to Vector optimization pass transforming 64-bit integer computations into a vecto
+-msvr4-struct-return                           -- return small structs in registers
+-mtbm                                          -- support TBM built-in functions and code generation
+-mthread-model                                 -- the thread model to use
+-mthreads                                      -- support thread-safe exception handling on MinGW
+-mthumb                                        -- thumb
+-mtls-dialect                                  -- use given thread-local storage dialect
+-mtls-direct-seg-refs                          -- use direct references against %gs when accessing tls data
+-mtls-size                                     -- specify bit size of immediate TLS offsets
+-mtsxldtrk                                     -- tsxldtrk
+-mtune                                         -- tune code for CPU type
+-mtvos-simulator-version-min                   -- tvos simulator version min
+-mtvos-version-min                             -- tvos version min
+-muclibc                                       -- use uClibc C library
+-muintr                                        -- uintr
+-multi_module                                  -- multi module
+-multiply_defined                              -- multiply defined
+-multiply_defined_unused                       -- multiply defined unused
+-municode                                      -- unicode
+-munsafe-fp-atomics                            -- enable unsafe floating point atomic instructions
+-mv5                                           -- equivalent to -mcpu=hexagonv5
+-mv55                                          -- equivalent to -mcpu=hexagonv55
+-mv60                                          -- equivalent to -mcpu=hexagonv60
+-mv62                                          -- equivalent to -mcpu=hexagonv62
+-mv65                                          -- equivalent to -mcpu=hexagonv65
+-mv66                                          -- equivalent to -mcpu=hexagonv66
+-mv67                                          -- equivalent to -mcpu=hexagonv67
+-mv67t                                         -- equivalent to -mcpu=hexagonv67t
+-mv68                                          -- equivalent to -mcpu=hexagonv68
+-mvaes                                         -- vaes
+-mveclibabi                                    -- vector library ABI to use
+-mvect8-ret-in-mem                             -- return 8-byte vectors in memory
+-mvpclmulqdq                                   -- vpclmulqdq
+-mvx                                           -- vx
+-mvzeroupper                                   -- generate vzeroupper instruction before a transfer of control flow out of the function
+-mwaitpkg                                      -- waitpkg
+-mwarn-nonportable-cfstrings                   -- warn nonportable cfstrings
+-mwatchos-simulator-version-min                -- watchos simulator version min
+-mwatchos-version-min                          -- watchos version min
+-mwatchsimulator-version-min                   -- watchsimulator version min
+-mwavefrontsize64                              -- specify wavefront size 64 mode
+-mwbnoinvd                                     -- wbnoinvd
+-mwidekl                                       -- widekl
+-mwindows                                      -- windows
+-mx32                                          -- generate 32bit x86-64 code
+-mx87                                          -- x87
+-mxop                                          -- support XOP built-in functions and code generation
+-mxsave                                        -- support XSAVE and XRSTOR instructions
+-mxsavec                                       -- support XSAVEC instructions
+-mxsaveopt                                     -- support XSAVEOPT instruction
+-mxsaves                                       -- support XSAVES and XRSTORS instructions
+-mzvector                                      -- zvector
+-no-canonical-prefixes                         -- do not canonicalize paths when building relative prefixes to other gcc components
+-no-integrated-cpp                             -- no integrated cpp
+-no-pie                                        -- no pie
+-no-pthread                                    -- no pthread
+-no_dead_strip_inits_and_terms                 -- no dead strip inits and terms
+-nobuiltininc                                  -- do not search builtin directory for include files
+-nocpp                                         -- no cpp
+-nocudainc                                     -- do not add include paths for CUDA/HIP and do not include the default CUDA/HIP wrapper headers
+-nocudalib                                     -- do not link device library for CUDA/HIP device compilation
+-nodefaultlibs                                 -- do not use the standard system libraries when linking
+-nofixprebinding                               -- no fixprebinding
+-nogpuinc                                      -- no gpuinc
+-nogpulib                                      -- no gpulib
+-nolibc                                        -- no libc
+-nomultidefs                                   -- no multidefs
+-nopie                                         -- no pie
+-noprebind                                     -- no prebind
+-noprofilelib                                  -- no profilelib
+-noseglinkedit                                 -- no seglinkedit
+-nostartfiles                                  -- do not use the standard system startup files when linking
+-nostdinc                                      -- do not search standard system directories or compiler builtin directories for include files
+-nostdinc++                                    -- disable standard #include directories for the C++ standard library
+-nostdlib                                      -- do not use standard system startup files or libraries when linking
+-nostdlib++                                    -- no stdlib++
+-nostdlibinc                                   -- do not search standard system directories for include files
+-o                                             -- write output to file
+-objcmt-atomic-property                        -- make migration to atomic properties
+-objcmt-migrate-all                            -- enable migration to modern ObjC
+-objcmt-migrate-annotation                     -- enable migration to property and method annotations
+-objcmt-migrate-designated-init                -- enable migration to infer NS_DESIGNATED_INITIALIZER for initializer methods
+-objcmt-migrate-instancetype                   -- enable migration to infer instancetype for method result type
+-objcmt-migrate-literals                       -- enable migration to modern ObjC literals
+-objcmt-migrate-ns-macros                      -- enable migration to NS_ENUM/NS_OPTIONS macros
+-objcmt-migrate-property                       -- enable migration to modern ObjC property
+-objcmt-migrate-property-dot-syntax            -- enable migration of setter/getter messages to property-dot syntax
+-objcmt-migrate-protocol-conformance           -- enable migration to add protocol conformance on classes
+-objcmt-migrate-readonly-property              -- enable migration to modern ObjC readonly property
+-objcmt-migrate-readwrite-property             -- enable migration to modern ObjC readwrite property
+-objcmt-migrate-subscripting                   -- enable migration to modern ObjC subscripting
+-objcmt-ns-nonatomic-iosonly                   -- enable migration to use NS_NONATOMIC_IOSONLY macro for setting property's atomic attribute
+-objcmt-returns-innerpointer-property          -- enable migration to annotate property with NS_RETURNS_INNER_POINTER
+-objcmt-white-list-dir-path                    -- only modify files with a filename contained in the provided directory path
+-objcmt-whitelist-dir-path                     -- objcmt whitelist dir path
+-object                                        -- object
+-p                                             -- enable function profiling for prof
+-pagezero_size                                 -- pagezero size
+-pass-exit-codes                               -- exit with highest error code from a phase
+-pedantic                                      -- issue all mandatory diagnostics in the C standard
+-pedantic-errors                               -- like -pedantic but issue them as errors
+-pg                                            -- enable function profiling for gprof
+-pie                                           -- create a position independent executable
+-pipe                                          -- use pipes rather than intermediate files
+-prebind                                       -- prebind
+-prebind_all_twolevel_modules                  -- prebind all twolevel modules
+-preload                                       -- preload
+-print-effective-triple                        -- print effective triple
+-print-file-name                               -- display the full path to library <library>
+-print-ivar-layout                             -- enable Objective-C Ivar layout bitmap print trace
+-print-libgcc-file-name                        -- display the name of the compiler's companion library
+-print-multi-directory                         -- display the root directory for versions of libgcc
+-print-multi-lib                               -- display the mapping between command line options and multiple library search directories
+-print-multi-os-directory                      -- display the relative path to OS libraries
+-print-multiarch                               -- display the target's normalized GNU triplet, used as a component in the library path
+-print-prog-name                               -- display the full path to compiler component <program>
+-print-resource-dir                            -- print resource dir
+-print-search-dirs                             -- display the directories in the compiler's search path
+-print-supported-cpus                          -- print supported cpus
+-print-sysroot                                 -- display the target libraries directory
+-print-sysroot-headers-suffix                  -- display the sysroot suffix used to find headers
+-print-target-triple                           -- print target triple
+-print-targets                                 -- print targets
+-private_bundle                                -- private bundle
+-pthread                                       -- support POSIX threads in generated code
+-pthreads                                      -- pthreads
+-quiet                                         -- do not display functions compiled or elapsed time
+-r                                             -- product a relocatable object as output
+-rdynamic                                      -- pass the flag -export-dynamic to the ELF linker, on targets that support it
+-read_only_relocs                              -- read only relocs
+-relocatable-pch                               -- relocatable pch
+-remap                                         -- remap file names when including files
+-rewrite-legacy-objc                           -- rewrite Legacy Objective-C source to C++
+-rewrite-objc                                  -- rewrite Objective-C source to C++
+-rpath                                         -- rpath
+-rtlib                                         -- rtlib
+-s                                             -- remove all symbol table and relocation information from the executable
+-save-stats                                    -- save code generation statistics
+-save-temps                                    -- do not delete intermediate files
+-sectalign                                     -- sectalign
+-sectcreate                                    -- sectcreate
+-sectobjectsymbols                             -- sectobjectsymbols
+-sectorder                                     -- sectorder
+-seg1addr                                      -- seg1addr
+-seg_addr_table                                -- seg addr table
+-seg_addr_table_filename                       -- seg addr table filename
+-segaddr                                       -- segaddr
+-segcreate                                     -- segcreate
+-seglinkedit                                   -- seglinkedit
+-segprot                                       -- segprot
+-segs_read_                                    -- segs read
+-segs_read_only_addr                           -- segs read only addr
+-segs_read_write_addr                          -- segs read write addr
+-serialize-diagnostics                         -- serialize diagnostics
+-shared                                        -- create a shared library
+-shared-libasan                                -- dynamically link the sanitizer runtime
+-shared-libgcc                                 -- force shared libgcc
+-shared-libsan                                 -- shared libsan
+-single_module                                 -- single module
+-specs                                         -- override built-in specs with the contents of <file>
+-static                                        -- on systems that support dynamic linking, this prevents linking with the shared libraries
+-static-libgcc                                 -- force static libgcc
+-static-libgfortran                            -- static libgfortran
+-static-libsan                                 -- statically link the sanitizer runtime
+-static-libstdc++                              -- static libstdc++
+-static-openmp                                 -- use the static host OpenMP runtime while linking.
+-static-pie                                    -- static pie
+-std                                           -- assume that the input sources are for specified standard
+-std-default                                   -- std default
+-stdlib                                        -- stdlib
+-stdlib++-isystem                              -- use directory as the C++ standard library include path
+-sub_library                                   -- sub library
+-sub_umbrella                                  -- sub umbrella
+-sycl-std                                      -- SYCL language standard to compile for
+-symbolic                                      -- bind references to global symbols when building a shared object
+-t                                             -- undocumented option
+-target                                        -- generate code for the given target
+-time                                          -- time the execution of each subprocess
+-traditional                                   -- traditional
+-traditional-cpp                               -- use traditional preprocessor
+-trigraphs                                     -- process trigraph sequences
+-twolevel_namespace                            -- twolevel namespace
+-twolevel_namespace_hints                      -- twolevel namespace hints
+-u                                             -- pretend symbol to be undefined
+-umbrella                                      -- umbrella
+-undef                                         -- do not predefine system specific and gcc specific macros
+-undefined                                     -- undefined
+-unexported_symbols_list                       -- unexported symbols list
+-unwindlib                                     -- unwindlib
+-v                                             -- enable verbose output
+-verify-pch                                    -- load and verify that a pre-compiled header file is not stale
+-version                                       -- display the compiler's version
+-w                                             -- suppress warnings
+-weak-l                                        -- weak l
+-weak_framework                                -- weak framework
+-weak_library                                  -- weak library
+-weak_reference_mismatches                     -- weak reference mismatches
+-whatsloaded                                   -- whatsloaded
+-whyload                                       -- whyload
+-working-directory                             -- resolve file paths relative to the specified directory
+-x                                             -- specify the language of the following input files
+-y                                             -- the action to perform on the input
+

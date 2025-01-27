@@ -5,7 +5,6 @@ categories: [Cyber Security, CTFs]
 tags: [reconnaissance, nmap, enumeration, host discovery]
 ---
 
-
 ## Syntax
 
 ```sh
@@ -35,13 +34,13 @@ nmap -sL <iplist>
 # Only discover host, no port scan :
 nmap -sn <iplist>
 
-# Reverse DNS lookup for offline hosts, (providing dns server is optional) - 
+# Reverse DNS lookup for offline hosts, (providing dns server is optional) -
 nmap -R --dns-servers DNS_SERVER <iplist>
 
 # no DNS lookup
 nmap -n <IP list>
 
-# Scan host that appears to be down: 
+# Scan host that appears to be down:
 nmap -Pn <iplist>
 
 # ARP scan (same subnet)
@@ -69,6 +68,7 @@ nmap -PU[portlist] <iplist>
 ## Port Scan
 
 ### Specifying ports
+
 By default nmap scans top 1000 ports.
 
 ```sh
@@ -93,27 +93,29 @@ nmap -p- <iplist>
 ```
 
 ### Scan Timing
+
 Time delay between each scan request
 
-| Timing | Total | Duration |
-| ------ | ----- | -------- |
-| T0 | (paranoid)  | 9.8 hours |
-| T1 | (sneaky) | 27.53 minutes |
-| T2 | (polite) | 40.56 seconds |
-| T3 | (normal) | 0.15 seconds |
-| T4 | (aggressive) | 0.13 seconds |
-| T5 | (insane) |   |
+| Timing | Total        | Duration      |
+| ------ | ------------ | ------------- |
+| T0     | (paranoid)   | 9.8 hours     |
+| T1     | (sneaky)     | 27.53 minutes |
+| T2     | (polite)     | 40.56 seconds |
+| T3     | (normal)     | 0.15 seconds  |
+| T4     | (aggressive) | 0.13 seconds  |
+| T5     | (insane)     |               |
 
 ```sh
 # Example:
 nmap -T0 -sn <iplist>
 
-# or 
+# or
 nmap -T paranoid  <iplist>
 
 ```
 
 ### Packet rate
+
 Setting the number of packet sent per second:
 
 ```sh
@@ -125,6 +127,7 @@ nmap --max-rate <number> <iplist>
 ```
 
 ### Setting parallel requests
+
 Setting number of scan requests (host discovery/port scan) in parallel:
 
 ```sh
@@ -144,14 +147,13 @@ nmap —host-timeout <time in seconds> <iplist>
 nmap —host-timeout 900ms <iplist>
 ```
 
-
 ## Basic Scan types
 
 ```sh
 # TCP connect scan, complete TCP 3-way handshake (SYN,SYN/ACK, ACK)
 nmap -sT <iplist>
 
-# TCP SYN scan, send the SYN flag and reset the connection without 
+# TCP SYN scan, send the SYN flag and reset the connection without
 # completing the 3-way handshake:
 nmap -sS <iplist>
 
@@ -167,11 +169,11 @@ nmap -sU <iplist>
 # slow because no response indicates an open port
 nmap -sN <iplist>
 
-# FIN scan, set FIN flag in TCP header, 
+# FIN scan, set FIN flag in TCP header,
 # slow because no response indicates an open port
 nmap -sF <iplist>
 
-# XMAS scan, set FIN, PSH, URGENT flag in TCP header, 
+# XMAS scan, set FIN, PSH, URGENT flag in TCP header,
 # slow because no response indicates an open port
 nmap -sX <iplist>
 
@@ -188,13 +190,12 @@ nmap -sA <iplist>
 nmap -sW <iplist>
 
 # custom combination of TCP flags,
-# TCP flags can be a concatenated string of 
+# TCP flags can be a concatenated string of
 # these flags: URG, ACK, PSH, RST, SYN, FIN
 # Eg. --scanflags ACKPSH
 nmap --scanflags <TCP flags> <iplist>
 
 ```
-
 
 ## Manipulating Request
 
@@ -251,7 +252,9 @@ nmap --reason <iplist>
 ```
 
 ## Post scan activities
+
 ### Version detection:
+
 Low version intensity has lower chances of identifying the version
 
 ```sh
@@ -268,7 +271,9 @@ nmap -sV --version-all <iplist>
 nmap -sV --version-intensity LEVEL <iplist>
 
 ```
+
 ### OS Detection
+
 ```sh
 # detect OS and other relevant details like version, kernel
 sudo nmap -sS -O <iplist>
@@ -276,6 +281,7 @@ sudo nmap -sS -O <iplist>
 ```
 
 ### Traceroute
+
 ```sh
 # find routers between source and target machine
 sudo nmap -sS --traceroute <iplist>
@@ -300,8 +306,9 @@ nmap -oA <basename> <iplist>
 ```
 
 ### Nmap Scripts
-  - All the scripts are located at `/usr/share/nmap/scripts`
-  - Other categories include auth, broadcast, brute, default, discovery, dos, exploit, external, fuzzer, intrusive, malware, safe, version, and vuln
+
+- All the scripts are located at `/usr/share/nmap/scripts`
+- Other categories include auth, broadcast, brute, default, discovery, dos, exploit, external, fuzzer, intrusive, malware, safe, version, and vuln
 
 ```sh
 # run scripts from default category
@@ -316,12 +323,11 @@ nmap -sS --script <script name> <iplist>
 
 ```
 
-
 ## Useful examples:
 
 ```sh
 # find versions and vulnerabilities
-nmap -sV --script vuln  10.10.198.61 
+nmap -sV --script vuln  10.10.198.61
 
 # Enumerate Samba shares and usernames
 nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.165.133
@@ -329,4 +335,3 @@ nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.165.133
 # Mount information for NFS filesystem
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.165.133
 ```
-

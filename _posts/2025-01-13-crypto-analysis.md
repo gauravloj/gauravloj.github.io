@@ -7,7 +7,6 @@ tags: [cryptography, rsa, aes, sha, md5, hashes]
 
 Useful commands to handle different cryptographic scenarios
 
-
 ## Symmetric encryption
 
 ### GPG
@@ -51,7 +50,7 @@ openssl aes-256-cbc -pbkdf2 -iter 10000 -d -in encrypted_message -out original_m
 ## Asymmetric encryption
 
 ```sh
-# use genrsa to generate an RSA private key. 
+# use genrsa to generate an RSA private key.
 # 2048: key size of 2048 bits.
 openssl genrsa -out private-key.pem 2048
 
@@ -68,13 +67,15 @@ openssl pkeyutl -encrypt -in plaintext.txt -out ciphertext -inkey public-key.pem
 # Decrypt ciphertext using private key
 openssl pkeyutl -decrypt -in ciphertext -inkey private-key.pem -out decrypted.txt
 
-```
+# View Public key details
+ssh-keygen -lf /path/to/key.pub
 
+```
 
 ## Key Exchange
 
 ```sh
-# Specify dhparam to indicate Diffie-Hellman key exchange parameters 
+# Specify dhparam to indicate Diffie-Hellman key exchange parameters
 # along with the specified size in bits, such as 2048 or 4096.
 openssl dhparam -out dhparams.pem 2048
 
@@ -82,7 +83,6 @@ openssl dhparam -out dhparams.pem 2048
 openssl dhparam -in dhparams.pem -text -noout
 
 ```
-
 
 ## Hashing
 
@@ -93,8 +93,7 @@ openssl sha256 -hex -mac HMAC -macopt key:<key here> file.txt
 
 ```
 
-
-# Certificates
+## Certificates
 
 ```sh
 # Generate a certificate signing request
@@ -117,3 +116,13 @@ openssl req -x509 -newkey -nodes rsa:4096 -keyout key.pem -out cert.pem -sha256 
 openssl x509 -in cert.pem -text
 ```
 
+## Signing Emails
+
+```sh
+# Generate public and private keys
+gpg --gen-key
+
+# Encrypt the message
+gpg --encrypt --sign --armor -r strategos@tryhackme.thm message.txt
+
+```

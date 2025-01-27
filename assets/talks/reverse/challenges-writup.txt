@@ -1,0 +1,252 @@
+Challenge 1: Weird Snake - PicoCTF 2024
+
+file contains intermediand code for python language. 
+All the instructions work on stack data structure. 
+program_counter -> points to the next instruction to execute
+
+Description of each code in the file:
+
+1. BINARYADD/BINARYXOR: Top of stack is RHS and 2nd item is LHS
+```
+rhs = STACK.pop()
+lhs = STACK.pop()
+op = (any binary operator)
+STACK.append(lhs op rhs)
+```
+
+2. BUILDLIST: Builds a list of n top items from the stack
+	```
+	Eg. BUILDLIST 5 -> Build a list from top 5 items from the stack and push the list on stack
+```
+3. CALLFUNCTION: call a function from the stack with specified number of arguments
+```
+CALLFUNCTION 3
+
+
+# Since '3' is passed as parameter, 3 args will be popped from the stack. Note: They are passed in reverse order
+arg3 = stack.pop()
+arg2 = stack.pop()
+arg1 = stack.pop()
+fn_to_call  = STACK.pop()
+STACK.append(fn_to_call(arg1, arg2, arg3))
+```
+
+4. CALLMETHOD: Same as call function but top of stack contains the reference and 2nd item contains the function name, call a function from the stack with specified number of arguments
+```
+CALLMETHOD 3
+
+
+# Since '3' is passed as parameter, 3 args will be popped from the stack
+arg3 = stack.pop()
+arg2 = stack.pop()
+arg1 = stack.pop()
+
+CALLMETHOD = STACK.pop()
+object_reference  = STACK.pop()
+
+STACK.append(object_reference.fn_to_call(arg1, arg2, arg3))
+```
+
+5. COMPAREOP:
+```
+rhs = STACK.pop()
+lhs = STACK.pop()
+op = (any comparator operator) printend as a reference in the intermediate file
+STACK.append(lhs op rhs)
+```
+6. FORITER: Implies the stack[-1] is an iterator, and gets the next item from the iterator and pushes it to stack. If no next item is available then jumps to the given index.
+```
+FORITER 132
+curr_iter = STACK[-1]   # not, it is not popped
+next_item = next(curr_iter)
+# if next_item exists then push
+STACK.append(next_item)
+
+# If it doesn't exists, then increment the program counter by given number
+program_counter = 132
+```
+7. GETITER: STACK[-1] = iter(STACK[-1])
+8. JUMPABSOLUTE: Set program counter to point to the given index
+```
+JUMPABSOLUTE 132
+
+program_counter = 132
+```
+9. LISTAPPEND: appends the top of stack to the temporary list in a list comprehension syntax
+```
+item = STACK.pop()
+list.append(STACK[-i], item)
+```
+
+10. LOADCONST: Behind the scene there is an internal list of constants. Push the constant at the index given by the the arg to the stack
+```
+LOADCONST 8
+item = intern_const_list[8]
+STACK.append( item)
+```
+
+11. LOADFAST: similar to loadconst, but the value passed to the argument instead index
+12. LOADGLOBAL: get the value from global constants
+13. LOADMETHOD: pushes the function reference on the top of the stack. This reference belongs to a particular instance.
+14. LOADNAME: pushes the reference on the top of the stack
+15. MAKEFUNCTION: Creates a new function with top of stack as the reference to its code bloack
+16. POPJUMPIFFALSE: 
+```
+POP_JUMP_IF_FALSE 132
+if stack[-1] is False:
+	STACK.pop()
+program_counter = 132
+```
+17. POPTOP: STACK.pop()
+18. RETURNVALUE: returns stack.pop() to the caller function
+19. STOREFAST: save top of stack in the given variable name. An index is given as parameter. This index is for a internal list varnames
+```
+STOREFAST 21
+var_ref = internal_var_list[21]
+*var_ref = STACK.pop()
+```
+20. STORENAME: same as store fast, but from a different internal list
+21. UNPACKSEQUENCE: Assumes the top of stack is a list. Pop the list and push each item in the list from right to left. number of items should be exact equal to the number given as parameter.
+```
+UNPACK_SEQUENCE 3
+var_ref = STACK.pop()
+
+STACK.append(var_ref[2])
+STACK.append(var_ref[1])
+STACK.append(var_ref[0])
+```
+
+
+
+
+
+
+Final decoded code:
+#  —- START —
+input_list = [4, 54, 41, 0, 112, 32, 25, 49, 33, 3, 0, 0, 57, 32, 108, 23, 48, 4, 9, 70, 7, 110, 36, 8, 108, 7, 49, 10, 4, 86, 43, 110, 43, 88, 0, 67, 104, 125, 9, 78]
+key_str = 'J'
+key_str = '_' + key_str
+key_str = key_str + 'o'
+key_str = key_str + '3'
+key_str = 't' + key_str
+key_list = [ord(char) for char in key_str]
+while not(len(input_list) < len(key_list)):
+    key_list.extend(key_list)
+result = [ a ^ b for a, b in zip(input_list, key_list) ]
+result_text = ''.join(map(chr, result))
+print(result_text)
+# picoCTF{N0t_sO_coNfus1ng_sn@ke_1a73777f}
+
+#  —- END —
+
+
+
+—------
+
+
+
+
+Challenge 2: Packer trouble - PicoCTF 2024
+Steps:
+1. See the printable strings using the strings commands: `strings packer.out`
+2. It will print a line with packer information: 
+	$Info: This file is packed with the UPX executable packer http://upx.sf.net $
+3. Use upx to unpack the binary: `upx -d packer.out` . Note, it unpacks the same file, so the original file will be overwritten.
+4. Again use the strings command on unpacked binary will print the flag: `strings packer.out`
+
+
+Challenge 3 - File Run - PicoCTF 2024
+It is a simple binary that prints the flag on running. 
+It is added to try out different ways to analyse the binary files.
+
+Challenge 4 - Crackme - PicoCTF 2024
+This is a little advanced for the session, but added it for practice
+
+Usual, gather information using static analysis
+On analysing the binary in ghidra, it is simply transforming the input to something else and then comparing it with pre-defined string
+Either we reverse engineer the password, or change the comparison logic
+
+Method 1: Manipulate the comparison
+checksec --file=./crackme100: It says 'No PIE' means the addresses will stay the same. 
+objdump -M intel --disassemble=main crackme100  | grep cmp -> to find the address of the line where the comparison happens.
+Run the binary in gdb, and add a breakpoint at the comparison instruction
+let the single instruction execute
+change the status flag to non-zero by modifying the RAX value: `set $rax = 0x1234`
+hit continue in gdb, it will give the results
+
+Method 2: Find the transformation
+Open the binary in ghidra
+Open the decompiled version of main function
+Things to analyse:
+local variables initialized with some hex value: right click on the first variable and select 'retype variable' and choose the type as 'char [52]' to define the variable as a character variable of length 52. This 52 came from the number ofhardcoded bytes in the values.
+There is a double for loop that performs some operation on the user input:
+first for loop is running 3 times
+2nd for loop is running n times where n is the length of our 'retyped' variable, i.e. 49. excluding null byte 
+That means, same transformation is happening 3 times on the user input
+3 instractions are simply bit manipulation using right shift, bitwise AND and modulo operators
+This instructions is a simple mod operation: 
+"user_pass[local_10] = local_21 + (char)iVar2 + (char)(iVar2 / 0x1a) * -0x1a"
+It translates to: 
+"user_pass[local_10] = (local_21 + (char)iVar2) % 26
+
+Translated python code is:
+
+#  —- START —
+
+len_out = 50
+
+def gen_offset():
+    secret1 = 0x55
+    secret2 = 0x33
+    secret3 = 0xf
+    offset = []
+    for src_idx in range(len_out):
+        uVar1 = (src_idx >> 1 & secret1) + (src_idx & secret1)
+        uVar2 = (uVar1 >> 2 & secret2) + (secret2 & uVar1)
+        iVar2 = (uVar2 >> 4 & secret3) + (secret3 & uVar2)
+        offset.append(iVar2)
+
+    return offset
+
+offset_list = gen_offset()
+
+
+def decrypt_offset(input_str):
+    basechar = ord('a')
+    newstr = ""
+    for _ in range(3):
+        newstr = ""
+        for src_idx in range(len_out):
+            offset = offset_list[src_idx]  + ord(input_str[src_idx]) - basechar
+            newstr += chr(basechar + (offset % 26))
+        input_str = newstr
+    return newstr
+
+
+def encrypt_offset(input_str):
+    basechar = ord('a')
+    newstr = ""
+    for _ in range(3):
+        newstr = ""
+        for src_idx in range(len_out):
+            offset = ord(input_str[src_idx]) - basechar - offset_list[src_idx]
+            newstr += chr(basechar + (offset % 26))
+        input_str = newstr
+    return newstr
+
+if __name__ == "__main__":
+    # sample_input = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwx"
+    # encryyptstr = encrypt_offset(sample_input)
+    # decrypt_str = decrypt_offset(encryyptstr)
+    # print("Original: ", sample_input)
+    # print("Offset encrypt: ", encryyptstr)
+    # print("Offset decrypt: ", decrypt_str)
+    # exit()
+
+    output = "apijaczhzgtfnyjgrdvqrjbmcurcmjczsvbwgdelvxxxjkyigy"
+    cipher = encrypt_offset(output)
+    print(f"output: {output}")
+    print(f"cipher: {cipher}")
+
+#  —- END —
+
