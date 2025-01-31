@@ -242,7 +242,7 @@ find . -executable -type f -exec ls -lh {} \;
 
 The demo file is taken from one of the challenge given in `Huntress CTF 2024` organized during Cybersecurity Awareness month.
 
-File: [gocrackme](../assets/talks/reverse/gocrackme)
+File: [gocrackme](/assets/talks/reverse/gocrackme)
 
 Challenge Description:
 

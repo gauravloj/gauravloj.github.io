@@ -1,7 +1,7 @@
 ---
 title: Crypto Commands
 time: 2025-01-13 13:04:09
-categories: [Cyber Security, CTFs]
+categories: [CTF, Command References]
 tags: [cryptography, rsa, aes, sha, md5, hashes]
 ---
 

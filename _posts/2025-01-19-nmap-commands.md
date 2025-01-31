@@ -1,7 +1,7 @@
 ---
 title: Nmap Commands
 time: 2025-01-19 21:55:16
-categories: [Cyber Security, CTFs]
+categories: [CTF, Command References]
 tags: [reconnaissance, nmap, enumeration, host discovery]
 ---
 
