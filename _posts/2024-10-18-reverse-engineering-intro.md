@@ -1,3 +1,10 @@
+---
+title: Reverse Engineering Intro
+time: 2024-10-18h 13:28:23
+categories: [Talks, "2024"]
+tags: [linux, reverse-engineering, c, reversing-demo, presentation-2024]
+---
+
 ## Description
 
 This is the presentation slides for the talk given in October 2024 at DC604 - Vancouver Cybersecurity Community.

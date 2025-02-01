@@ -2,7 +2,7 @@
 title: Memory Management
 time: 2024-08-01 18:51:08
 categories: [Talks, "2024"]
-tags: [linux, memory management, c, optimization]
+tags: [linux, memory management, c, optimization, presentation-2024]
 ---
 
 ## Description

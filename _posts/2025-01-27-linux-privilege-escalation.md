@@ -1,7 +1,7 @@
 ---
 title: Linux Privilege Escalation
 time: 2025-01-27 20:01:22
-categories: [CTF, Command References]
+categories: [CTF, Privilege Escalation]
 tags: [privilege-escalation, linux, ctf, suid, sudo, ldpreload]
 ---
 
@@ -53,7 +53,7 @@ Different tools to check available escalation options:
 
 Note: Kernel exploit can be irreversable to the system, so run cautiously for the exact version only.
 
-———
+---
 
 ### Sudo permissions
 
