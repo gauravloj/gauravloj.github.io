@@ -8,7 +8,6 @@ tags: [useful-links]
 - [Pentest Checklist](https://github.com/netbiosX/Checklists)
 - [OSCP Preparation material](https://sushant747.gitbooks.io/total-oscp-guide/content/)
 - [Assembly instructions reference](http://ref.x86asm.net/index.html)
-- [Modular Arithmatic - Cryptography](https://www.britannica.com/science/modular-arithmetic)
 - [CLI Commands for Linux, MacOS, CMD, PowerShell](https://ss64.com/)
 - [Windows Portable Executable format](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format)
 - [Windows Registry details](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users)
@@ -21,3 +20,8 @@ tags: [useful-links]
 - [Vulnerability Database - Rapid7](https://www.rapid7.com/db/)
 - [Vulnerability Database - CVE details](https://www.cvedetails.com/)
 - [Vulnerability Database - CVE MITRE](https://cve.mitre.org/cve/)
+
+
+## Good blogs
+
+- [HackTricks](https://book.hacktricks.wiki/en/index.html)

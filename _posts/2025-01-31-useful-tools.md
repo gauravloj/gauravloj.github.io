@@ -1,13 +1,14 @@
 ---
 title: Useful Tools
 time: 2025-01-31 09:28:45
-categories: [CuberSecurity, References]
+categories: [CyberSecurity, References]
 tags: [tools, osint, privilege-escalation, enumeration, recon, reconnaissance]
 ---
 
 ## Windows
 
 - [Forensics tool for windows event logs](https://github.com/WithSecureLabs/chainsaw)
+- [Powershell script for enumeration - powerView](https://github.com/PowerShellMafia/PowerSploit/blob/dev/Recon/PowerView.ps1)
 
 ## Linux
 
@@ -32,3 +33,5 @@ tags: [tools, osint, privilege-escalation, enumeration, recon, reconnaissance]
 - [SHODAN - details about online ports](https://www.shodan.io/)
 - [Cyberchef - small operations various text formats](https://gchq.github.io/CyberChef)
 - [sub resource integrity - check file hash of only referenced library](https://www.srihash.org/)
+- [Phishing Tool - GoPhish](https://github.com/gophish/gophish)
+- [Windows SQL exploitation - PowerUpSQL](https://github.com/NetSPI/PowerUpSQL)
