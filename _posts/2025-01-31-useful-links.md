@@ -21,7 +21,6 @@ tags: [useful-links]
 - [Vulnerability Database - CVE details](https://www.cvedetails.com/)
 - [Vulnerability Database - CVE MITRE](https://cve.mitre.org/cve/)
 
-
 ## Good blogs
 
 - [HackTricks](https://book.hacktricks.wiki/en/index.html)
