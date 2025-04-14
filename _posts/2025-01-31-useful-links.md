@@ -20,7 +20,11 @@ tags: [useful-links]
 - [Vulnerability Database - Rapid7](https://www.rapid7.com/db/)
 - [Vulnerability Database - CVE details](https://www.cvedetails.com/)
 - [Vulnerability Database - CVE MITRE](https://cve.mitre.org/cve/)
+- [Terminal TeleTypes explained](https://www.linusakesson.net/programming/tty/)
+- [PWNTools tutorials](https://github.com/Gallopsled/pwntools-tutorial)
 
 ## Good blogs
 
 - [HackTricks](https://book.hacktricks.wiki/en/index.html)
+- [James Fisher Blogs](https://jameshfisher.com/)
+- [Trail of Bits](https://blog.trailofbits.com)
