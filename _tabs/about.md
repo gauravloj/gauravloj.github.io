@@ -24,9 +24,10 @@ Senior Software Developer with 9+ years of experience in finance, media & teleco
 - [MediaKind](/posts/mediakind/)
 - [Morgan Stanley](/posts/morgan-stanley/)
 
-### VMware, Bangalore, India
+## Security Experience
 
-Member of Technical Staff
-Dec 2021- Mar 2022 (4 months)
+- Preparing for SOC2 certification
+- Self-learning from different platforms
+- Practice from CTF events
+- Coming soon - Hosting a CTF event
 
-- Improved the code reliability and maintainability of Unified Endpoint Management system by adding/updating unit test.

@@ -72,10 +72,10 @@ def is_quad_residue(a, P):
 
 ### Simplified Square Root
 
-It is not always easy to find the modular square root of a number, but by putting a restriction on `P` or `a`.
+It is not always easy to find the modular square root of a number, but by putting a restriction on `P`.
 it can be easier to find the square root.
 
-If `P % 4 = 3` or `a = 4*i + 3, for all i as positive integers` then square root of all the Quadratic resuduals can be calculated using the formula
+If `P % 4 = 3` or `P = 4*i + 3, for all i as positive integers` then square root of all the Quadratic resuduals can be calculated using the formula
 
 > ±a^((P + 1)/4)
 
@@ -93,6 +93,52 @@ def sqrt_mod_P(a, P):
     return (n1, n2)
 
 ```
+
+### Tonelli Shank Algorithm
+
+Previous algorithm was applicable only for half of the `P`. To solve the same problem for all the `P > 2`,
+[Tonelli–Shanks algorithm](https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm) can be used.
+
+It's implementation is directly copied from [RosettaCode - Tonelli Shank's Algorithm](https://rosettacode.org/wiki/Tonelli-Shanks_algorithm#Python)
+I will add explanation, after going thorugh its details.
+
+```python
+
+def legendre(a, P):
+    return pow(a, (P - 1) // 2, P)
+
+
+def tonelli(n, P):
+    assert legendre(n, P) == 1, "not a square (mod P)"
+    q = P - 1
+    s = 0
+    while q % 2 == 0:
+        q //= 2
+        s += 1
+    if s == 1:
+        return pow(n, (P + 1) // 4, P)
+    for z in range(2, P):
+        if P - 1 == legendre(z, P):
+            break
+    c = pow(z, q, P)
+    r = pow(n, (q + 1) // 2, P)
+    t = pow(n, q, P)
+    m = s
+    t2 = 0
+    while (t - 1) % P != 0:
+        t2 = (t * t) % P
+        for i in range(1, m):
+            if (t2 - 1) % P == 0:
+                break
+            t2 = (t2 * t2) % P
+        b = pow(c, 1 << (m - i - 1), P)
+        r = (r * b) % P
+        c = (b * b) % P
+        t = (t * c) % P
+        m = i
+    return r
+```
+
 
 ### Example
 

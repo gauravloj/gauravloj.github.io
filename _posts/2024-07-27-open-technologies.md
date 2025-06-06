@@ -23,6 +23,7 @@ tags:
     confluence,
     miro,
     figma,
+    soc2,
   ]
 ---
 
@@ -62,6 +63,10 @@ Similar to AHN, I got to work on this product right from the beginning and learn
 
 Read more about the tool on the [official website](https://opentech.eco/products/virtual-audits-and-decarbonization-planning/).
 
+### SOC2 Certification
+
+OPEN's client requires us to have well known security certifications to have confidence on us before signing any contract. To satisfy their requirements, I am part of the security committe and contribute in making OPEN ready for the SOC2 certification.
+
 ## My Contributions and Achievements
 
 ### AHN
@@ -83,14 +88,24 @@ Read more about the tool on the [official website](https://opentech.eco/products
 - Develop the python package to generate decarbonization plans in 1/10th of the time it takes to do it manually
 - Designed easy setup of the tool to be used by non-technical person, hence reduced the dependency on developers to generate the final plans
 
-### Overall
+### Security
 
-- Enhance team productivity by adding project documentation, technical documentation and troubleshooting guides on confluence
+As part of the SOC2 journey, I have been doing these tasks
+- Asset managements - List down different assets and their impace on the company. These assets includes cloud resources, domains, documents, people and physical assets.
+- Access management - Ensure role based access wherever possible. It means, creating new API keys with fine-grained permissions and deleting overly permissive keys, Removing privileged credentials from shared password vault, checking SSO groups for appropriate permissions.
+- Policies and guidelines - Writine and reviewing  policies/guidelines like server hardening guidelines, incident response playbooks, security policies, backup policies, Business continuity & Disaster recovery policies, secure coding checklist and best practices.
+- Incident Response - Actively respond to any security incident. So far it is mostly phishing attempts. Analyzed one of the phishing mail to know the intent behind the mail.
+- Securing Infrastructure - Secure cloud servers by following server hardening guidelines. It includes tasks like setting up firewall, keeping the OS up to date, Creating users with least privilege required, always using TLS connection for any type of server communication.
+
+### Others
+
 - Design system architecture for all the above projects
+- Refactoring old code to make it more readable and maintainable
+- Added logging and monitoring in these projects
 - Set up the CI/CD pipeline using GithubActions to automatically test and deploy the website on DigitalOcean, thereby generating a quick feedback loop for development
 - Upgrade analytics tool to exclude internal traffic from the actual analytics data of the website usage
-- Wrote script to generate ssh keys of active development team members, to remove any old unused keys in the clod virtual machines.
 - Code reviews to ensure best coding standards
+- Enhance team productivity by adding project documentation, technical documentation and troubleshooting guides on confluence
 
 ## Skills Acquired
 
@@ -102,9 +117,9 @@ Read more about the tool on the [official website](https://opentech.eco/products
 - In depth diagnosis of the code to perform runtime optimizations
 - DevOps knowledge viz. build pipeline, version control strategies, monitoring tools
 - Service health analysis skills to know what to look for and where to look for
-- Best security practices
+- Security practices needed for different certifications
 - Tools and Technologies used:
-  - Language: Python (Django), Javascript (Reactjs), HTML, CSS (TailwindCSS), BASH
+  - Language: Python (Django), Javascript (Reactjs), (TailwindCSS), BASH
   - DevOps - Terraform, Git, GithubActions, Docker, DO droplets (Virtual Machines), DO Spaces (Content Delivery Network), Plausible
   - Database - PostGreSQL database
   - Operating System - Linux
